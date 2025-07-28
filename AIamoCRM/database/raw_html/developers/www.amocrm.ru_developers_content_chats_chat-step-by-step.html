@@ -1,0 +1,3086 @@
+<!DOCTYPE html>
+<html lang="ru" class="ru  no-js">
+<head>
+  <title>Пример по шагам</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-itunes-app" content="app-id=1128315486" />
+
+  <meta name="keywords" content="main_page_keywords" />
+  <meta name="format-detection" content="telephone=no">
+
+      <meta name="og:site_name" content="amocrm.ru">
+    <meta name="og:image" content="/version2/images/logo_bill.png" />
+    <meta name="og:url" content="https://www.amocrm.ru/">
+    <meta name="og:title" content="Онлайн CRM система. Управление клиентами в современной облачной CRM" />
+    <meta name="og:description" content="Система amoCRM – удобная web программа для анализа продаж, доступная в режиме online из любой точки мира! Подробности узнавайте по указанным на сайте телефонам в Москве." />
+    <meta name="description" content="Система amoCRM – удобная web программа для анализа продаж, доступная в режиме online из любой точки мира! Подробности узнавайте по указанным на сайте телефонам в Москве." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Онлайн CRM система. Управление клиентами в современной облачной CRM">
+    <meta name="twitter:description" content="Система amoCRM – удобная web программа для анализа продаж, доступная в режиме online из любой точки мира! Подробности узнавайте по указанным на сайте телефонам в Москве.">
+    <meta name="twitter:image" content="/version2/images/logo_bill.png">
+    <meta name="twitter:domain" content="https://www.amocrm.ru/">
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="alternate" href="http://www.amocrm.com/es/" hreflang="es" type="text/html">
+  <link rel="alternate" href="http://www.amocrm.com/" hreflang="en" type="text/html">
+  <link rel="alternate" href="http://www.amocrm.ru/" hreflang="ru" type="text/html">
+  <link rel="alternate" href="http://www.amocrm.com.ua/" hreflang="ru-ua" type="text/html">
+
+  <script nonce="e9af510aa1a2">
+
+    window.AMOCRM = {
+      user_auth: 0,
+      host_name: '.amocrm.ru',
+      geo: {
+        language: 'ru',
+        country: 'RU',
+        country_code: 'ru'
+      },
+      langs: {
+        "login_used": "Логин занят",
+        "EMPTY_EMAIL": "Вы не ввели email",
+        "EMPTY_PHONE": "Вы не ввели телефон",
+        "INCORRECT_PHONE": "Некорректный номер",
+        "LONG_PHONE": "Вы ввели очень длинный телефон",
+        "SMALL_PHONE": "Слишком короткий телефон",
+        "INCORRECT_EMAIL": "Вы ввели некорректный Email",
+        "SHORT_FIO": "Вы ввели слишком короткие имя и фамилию",
+        "EMPTY_FIO": "Вы не ввели имя и фамилию",
+        "EMPTY_PASS": "Вы не ввели пароль",
+        "SHORT_PASS": "Пароль должен быть не менее 6 символов",
+        "NO_COUPON": "Нет такого купона",
+        "CREATE_YOUR_PASS_FOR_ENTER": "Придумайте пароль для входа",
+        "ENTER_YOUR_PASS_FOR_ENTER": "Пароль",
+        "WRONG_PASSWORD": "Неверный пароль",
+        "SMALL_PASSWORD": "Пароль должен быть не менее 6 символов",
+        "LONG_PASSWORD": "Пароль не должен превышать 72 символа",
+        "WRONG_PASS_CONFIRMATION": "Неверное подтверждение пароля",
+        "ENTER_CAPTCHA_CODE": "Введите код с картинки",
+        "AUTH_CAPTCHA_FAIL": "Введен неверный код, <\/br>E-Mail или пароль некорректны"
+      },
+      site: {
+        dir: '/'
+      },
+      getVisitorUid: function () {
+        return window.AMOPIXEL_IDENTIFIER && window.AMOPIXEL_IDENTIFIER.getVisitorUid
+          ? window.AMOPIXEL_IDENTIFIER.getVisitorUid()
+          : null;
+      },
+      user_ip: '149.88.109.83'
+    };
+  </script>
+
+  
+  <link href="/static/fonts/fontello/css/fontello.css?1744199315" type="text/css" rel="stylesheet" />
+
+       <link href="/static/app.css?1744199315" type="text/css" rel="stylesheet" />
+  
+    <link rel="stylesheet" href="/static/sass/pages/developers/prism.css?1744199315">
+  <link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="amoCRM &raquo; Feed" href="https://www.amocrm.ru/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.amocrm.ru\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.amocrm.ru/wordpress/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighterjs-css'  href='https://www.amocrm.ru/wordpress/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=91FJbQXg1q7lC1V' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='https://www.amocrm.ru/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.amocrm.ru/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.amocrm.ru/wordpress/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Источники' href='https://www.amocrm.ru/developers/content/crm_platform/sources-api' />
+<link rel='next' title='Начало работы' href='https://www.amocrm.ru/developers/content/chats/chat-start' />
+<meta name="generator" content="WordPress 5.4.2" />
+<link rel="canonical" href="https://www.amocrm.ru/developers/content/chats/chat-step-by-step" />
+<link rel='shortlink' href='https://www.amocrm.ru/?p=27142' />
+<link rel="alternate" type="application/json+oembed" href="https://www.amocrm.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.amocrm.ru%2Fdevelopers%2Fcontent%2Fchats%2Fchat-step-by-step" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.amocrm.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.amocrm.ru%2Fdevelopers%2Fcontent%2Fchats%2Fchat-step-by-step&#038;format=xml" />
+
+  <link rel="stylesheet" href="/static/assets/enlighter/enlighter.css?1744199312">
+  <link rel="stylesheet" href="/static/assets/enlighter/enlighter_custom.css?1744199312">
+</head>
+
+<body class="mini_header-page page--developers line-numbers " nonce="e9af510aa1a2">
+    <script nonce="e9af510aa1a2">(function(a,m,o,c,r,m){a[m]={id:"268723",hash:"606945af4abfbf038bc47471edbcb504489712f4754c20b4d3c1982a41999385",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1661352817';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));</script>
+
+
+
+<div class="pricing-compare__holder" id="pricing-compare">
+  <div class="pricing-compare scrollable-wrapper"></div>
+</div>
+
+<div class="new_try_now-wrapper " id="new_try_now">
+  <div class="new_try_now__container">
+    <div class="new_try_now scrollable-wrapper">
+      <div class="new_try_now__inner">
+        <div class="new_try_now__button_close_holder">
+          <div class="new_try_now__button_close_wrapper">
+            <div class="new_try_now__button_close"><span class="new_try_now__close_cross"></span><span class="new_try_now__button_close_title">Закрыть</span>
+            </div>
+          </div>
+        </div>
+        <div class="new_try_now__title">	<span class="new_try_now__title_small">Полная версия. 14 дней бесплатно.</span>
+          <span class="new_try_now__title_large">ЭФФЕКТИВНО</span>
+          <span class="new_try_now__title_large">УДОБНО</span>
+          <span class="new_try_now__title_large">ПРОСТО</span>
+        </div>
+        <form id="new_try_now__form" class="new_try_now__form" method="post" action="/?logout=yes" novalidate="">
+          <input class="visitor_uid" name="signup[data][visitor_uid]" type="hidden">
+          <input type="hidden" name="csrf_token" value=def50200aa0a7bd5a37e84e993d2ec87229e013d20370c77dfefe57cb3caeccbb543c586c740e67ae6296d58bb9f285f74cc1ca00af3670de42c9582a96ed9a41f5325437f44eb208d814ec667ea39ef80d6c96c1e7026cf5f75eb02248f4e58c2bf9d8442d21ac9a938907dcb6c5f04ad18851dc01f6075dd806d70a290cdb3b136e4ab6171e5fe843cd15108f4e508a014003fb4988735682213b2533aec278da52fba433a4feba40c0d40f3f99d5ff188f869ec96b7a0c6e93715c68506e9cb228b517af84b50eca210071201be12ecf562753d713643cd4efe1e1b7da7af5db07e3950f439463d4feee78e35cfaa9bcf494200459fdc25aaad1b76a089fb344292ab908e7e88e12033>
+
+          <div class="new_try_now_form">
+            <div class="new_try_now__block field" data-type="email">
+              <input type="email" name="signup[data][user_name]" tabindex="1" id="new_try_now_email_input" class="new_try_now__input try_now_mail new_try_now__reg new_try_now__auth" placeholder="Ваш email" value="" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
+              <div class="input__error-cross icon icon-cross-error"></div>
+              <div class="input__valid-cross icon icon-cross-valid"></div>
+            </div>
+            <div class="new_try_now__block show_when_email_not_available email_exists_message">Email недоступен для регистрации/добавления</div>
+            <div class="new_try_now__block show_when_email_exist email_exists_message">Указанный Вами e-mail уже зарегистрирован на проекте компании amoCRM. Введите Ваш пароль или <span class="js-forgot_password_link new_try_now__forgot_password_link">смените ваш пароль</span>
+            </div>
+            <div class="new_try_now__block show_when_email_exist field" data-type="password">
+              <input type="password" name="signup[data][password]" tabindex="1" id="new_try_now_pass_input" class="new_try_now__input try_now_pass new_try_now__auth" placeholder="Пароль" value="" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
+              <div class="input__error-cross icon icon-cross-error"></div>
+              <div class="input__valid-cross icon icon-cross-valid"></div>
+            </div>
+            <div class="new_try_now__block hide_when_email_exist field" data-type="name">
+              <input type="text" name="signup[data][first_name]" id="new_try_now_fio_input" tabindex="1" class="new_try_now__input try_now_person new_try_now__reg" placeholder="Ваше имя" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
+              <div class="input__error-cross icon icon-cross-error"></div>
+              <div class="input__valid-cross icon icon-cross-valid"></div>
+            </div>
+            <div class="new_try_now__block hide_when_email_exist">
+              <div class="field" data-type="tel">
+                <input type="tel" class="new_try_now__input new_try_now__reg" tabindex="1" name="signup[data][phone_num_unformated]" id="phone">
+                <input type="hidden" name="signup[data][phone_num]" id="hidden_phone">
+                <div class="input__error-cross icon icon-cross-error"></div>
+                <div class="input__valid-cross icon icon-cross-valid"></div>
+              </div>
+            </div>
+            <div class="new_try_now__block">
+              <div class="hidden g-recaptcha-form" id="new_try_now__recaptcha"></div>
+            </div>
+            <div class="hide_when_email_exist">
+              <p class="do_you_have_coupone">У вас есть купон?</p>
+              <div class="new_try_now__block field show_when_have_coupone" data-type="coupon_code">
+                <input type="text" name="coupon_code" class="new_try_now__input new_try_now__reg account_coupon_code" id="account_coupon_code" placeholder="Купон" value="">
+                <div class="input__error-cross icon icon-cross-error"></div>
+                <div class="input__valid-cross icon icon-cross-valid"></div>
+              </div>
+            </div>
+            <div class="new_try_now__agreement_wrapper">
+              <button type="submit" id="try_now__button_submit" class="hide_when_email_exist new_try_now__button"><span>Старт</span><span class="spinner-icon"></span>
+              </button>	<span class="try_now__button_submit_error">Что-то пошло не так. Пожалуйста, попробуйте еще раз.</span>
+              <button type="submit" id="try_now__button_login" class="show_when_email_exist new_try_now__button"><span>Войти</span><span class="spinner-icon"></span>
+              </button>
+              <div class="new_try_now__agreement_link">
+                <p>Нажимая кнопку, вы принимаете условия 
+                <a href="/agreement" target="_blank" title="Лицензионное соглашение">лицензионного соглашения</a>                 и даёте согласие на&nbsp;обработку
+                  <a href="/confidence" target="_blank" title="Политика компании в отношении обработки персональных данных">персональных данных</a>                </p>
+              </div>
+            </div>
+            <div id="new_try_now__notify" class="form_auth__notify form_auth__notify new_try_now__notify">
+              <span class="form_auth__notify_error form_auth__notify_error-message"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="reg_account_modal-wrapper" id="reg_account">
+  <div class="reg_account_modal__container">
+    <div class="reg_account_modal scrollable-wrapper">
+      <div class="reg_account_modal__inner">
+        <div class="reg_account_modal__button_close_holder">
+          <div class="reg_account_modal__button_close_wrapper">
+            <div class="reg_account_modal__button_close"><span class="reg_account_modal__close_cross"></span><span class="reg_account_modal__button_close_title">Закрыть</span>
+            </div>
+          </div>
+        </div>
+        <div class="reg_account_modal__title">	<span class="reg_account_modal__title_small">Полная версия. 14 дней бесплатно.</span>
+          <span class="reg_account_modal__title_large">ЭФФЕКТИВНО</span>
+          <span class="reg_account_modal__title_large">УДОБНО</span>
+          <span class="reg_account_modal__title_large">ПРОСТО</span>
+        </div>
+        <form id="reg_account_modal__form" class="reg_account_modal__form">
+          <input type="hidden" name="visitor_uid" class="visitor_uid">
+          <input type="hidden" name="country" class="country_reg" value="RU">
+          <input type="hidden" name="timezone" class="timezone" value="Europe/Moscow">
+          <input type="hidden" name="csrf_token" value=def50200aa0a7bd5a37e84e993d2ec87229e013d20370c77dfefe57cb3caeccbb543c586c740e67ae6296d58bb9f285f74cc1ca00af3670de42c9582a96ed9a41f5325437f44eb208d814ec667ea39ef80d6c96c1e7026cf5f75eb02248f4e58c2bf9d8442d21ac9a938907dcb6c5f04ad18851dc01f6075dd806d70a290cdb3b136e4ab6171e5fe843cd15108f4e508a014003fb4988735682213b2533aec278da52fba433a4feba40c0d40f3f99d5ff188f869ec96b7a0c6e93715c68506e9cb228b517af84b50eca210071201be12ecf562753d713643cd4efe1e1b7da7af5db07e3950f439463d4feee78e35cfaa9bcf494200459fdc25aaad1b76a089fb344292ab908e7e88e12033>
+          <div class="reg_account_modal_form">
+            <div class="reg_account_modal__block field">
+              <input maxlength="70" type="text" name="account_name" tabindex="1" class="reg_account_modal__input reg_account_modal__reg reg_account_modal_name__input" placeholder="Название аккаунта" value="" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
+              <div class="input__error-cross icon-cross-error reg_account_modal__input_error"></div>
+            </div>
+            <div class="reg_account_modal__block field">
+              <input maxlength="50" type="text" name="subdomain" tabindex="1" class="reg_account_modal__input reg_account_modal__reg reg_account_modal_address__input" placeholder="Адрес аккаунта" value="" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
+              <div class="input__error-cross icon-cross-error reg_account_modal__input_error"></div>
+              <span class="reg_account_modal__button_submit_error" id="error_account_name_and_domain">Адрес и название аккаунта должны содержать не менее 3-х символов</span>
+              <span class="reg_account_modal__button_submit_error" id="error_subdomain_is_exists">Такой адрес аккаунта уже существует, выберите, пожалуйста, другой</span>
+            </div>
+            <div class="reg_account_modal__account_wrapper">
+              <button type="submit" id="submit_reg_account_modal" class="reg_account_modal__button"><span>Старт</span><span class="spinner-icon"></span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div id="top-menu" class="top-menu">
+  <div class="top-menu__container scrollable-wrapper">
+    <div class="top-menu__inner-container">
+      <figure class="page_header__logo page_header__logo_min">
+        <a class="page_header__logo_image icon icon-amocrm-logo" href="/"></a>
+      </figure>
+
+      <figure class="page_header__logo page_header__logo_large">
+        <a class="page_header__logo_image icon icon-amocrm-logo-large" href="/"></a>
+      </figure>
+
+      <div id="main-menu_button" class="main-menu_button ">
+        <span class="main-menu_button__item"></span>
+        <span class="main-menu_button__item"></span>
+      </div>
+
+      <div class="page_header__navigation">
+        <ul class="page_header__nav">
+          <li class="page_header__nav_item">
+            <a class="page_header__nav_link top_inline_menu_item1" href="/tour/">Продукт</a>
+          </li>
+          <li class="page_header__nav_item">
+            <a class="page_header__nav_link top_inline_menu_item2" href="/buy/">Цены</a>
+          </li>
+          <li class="page_header__nav_item">
+            <a class="page_header__nav_link top_inline_menu_item4" href="/customers/">Отзывы</a>
+          </li>
+          <li class="page_header__nav_item">
+            <a class="page_header__nav_link top_inline_menu_item5" href="/cases/">Кейсы</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page_header__right-side">
+        <div id="page_header__auth" class="page_header__auth">
+                      <div id="page_header__auth_button" class="page_header__auth_button">
+              <span class="page_header__auth_button__icon page_header__auth_button__icon-lock icon icon-user-select-lock-blue"></span>
+              <div class="page_header__auth_button__text">Войти</div>
+            </div>
+            <div class="page_header__auth__trial">
+              <a class="page_header__auth__trial_link" href="#">Пробная версия</a>
+            </div>
+                  </div>
+
+        <div class="page_header__lang">
+          <!-- теперь тут живет смена языка -->
+          <div class="lang-switcher__wrapper lang-switcher__wrapper_head">
+            <ul class="lang-switcher lang-switcher_head" data-lang="ru">
+              <li class="lang-switcher__item active">Ru</li>
+              <li class="lang-switcher__item">
+                <a href="https://www.amocrm.com/" class="lang-switcher__link">En</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-menu__auth-form js-top-menu-auth-form">
+        <div class="form_auth__button_close top-menu__auth-form-close-button">
+  <span class="form_auth__button_close_title">
+    Закрыть
+  </span>
+  <span class="form_auth__button_close_icon icon icon-button-close"></span>
+</div>
+        <div class="js-top-menu-email-auth">
+  <form id="form_auth" action="" method="POST" target="_top" name="auth" novalidate>
+    <input type="hidden" id="csrf_token" name="csrf_token" value="def50200aa0a7bd5a37e84e993d2ec87229e013d20370c77dfefe57cb3caeccbb543c586c740e67ae6296d58bb9f285f74cc1ca00af3670de42c9582a96ed9a41f5325437f44eb208d814ec667ea39ef80d6c96c1e7026cf5f75eb02248f4e58c2bf9d8442d21ac9a938907dcb6c5f04ad18851dc01f6075dd806d70a290cdb3b136e4ab6171e5fe843cd15108f4e508a014003fb4988735682213b2533aec278da52fba433a4feba40c0d40f3f99d5ff188f869ec96b7a0c6e93715c68506e9cb228b517af84b50eca210071201be12ecf562753d713643cd4efe1e1b7da7af5db07e3950f439463d4feee78e35cfaa9bcf494200459fdc25aaad1b76a089fb344292ab908e7e88e12033">
+    <div class="form_auth__auth_container">
+      <div class="form_auth__type_block field" data-type="email">
+        <input type="email" id="auth-email login" name="username" class="form_auth__type form_auth__type_email" placeholder="Логин">
+        <!-- <span class="form_auth__type_error form_auth__type_error_email">Неверный E-Mail</span> -->
+        <span class="form_auth__icon icon icon-auth-icon-person"></span>
+        <div class="input__error-cross icon icon-cross-error"></div>
+        <div class="input__valid-cross icon icon-cross-valid"></div>
+      </div>
+
+      <div class="form_auth__type_block field" data-type="password">
+        <input id="auth-password Password" type="Password" placeholder="Пароль" name="password" class="form_auth__type form_auth__type_password" autocomplete="off">
+        <!-- <span class="form_auth__type_error form_auth__type_error_password">Введите пароль</span> -->
+        <span class="form_auth__icon icon icon-auth-icon-lock"></span>
+        <span class="form_auth__forgotpass js-form_auth__forgot">Забыли пароль?</span>
+        <div class="input__error-cross icon icon-cross-error"></div>
+        <div class="input__valid-cross icon icon-cross-valid"></div>
+      </div>
+
+      <div class="form_auth__type_block field hidden" id="form_auth__recaptcha"></div>
+
+      <div class="form_auth__isremember">
+        <input class="form_auth__isremember_type" id="UserRemember" name="temporary_auth" type="checkbox" value="N">
+        <label class="form_auth__isremember_label" for="UserRemember">
+          <span class="form_auth__isremember_icon icon icon-auth-check"></span>
+          Не запоминать
+        </label>
+
+        <button class="form_auth__button form_auth__button_submit" id="form_auth__button_submit" type="submit">
+          <span>Войти</span>
+          <span class="spinner-icon"></span>
+        </button>
+      </div>
+
+
+      <div id="form_auth__notify" class="form_auth__notify">
+        <span class="form_auth__notify_error form_auth__notify_error-message"></span>
+        <span class="form_auth__notify_error form_auth__notify_error_forgot js-form_auth__forgot hidden">Забыли пароль?</span>
+      </div>
+    </div>
+  </form>
+  <div id="form_auth__forgotpass">
+    <input type="hidden" name="TYPE" value="SEND_PWD">
+    <article class="form_auth__forgotpass_container hidden">
+      <label for="auth_forgotpass" class="form_auth__label form_auth__label_forgotpass-mail">Если вы забыли пароль, введите E-mail, указанный при регистрации. Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-mail</label>
+      <section class="form_auth__type_block field" data-type="email">
+        <input type="email" class="form_auth__type form_auth__type_forgotpass-mail" id="user_name_auth_forgotpass" name="USER_EMAIL" placeholder="Ваш email">
+        <span class="form_auth__type_error form_auth__type_error_email">Неверный E-Mail</span>
+        <span class="form_auth__type_error form_auth__type_error_recaptcha"></span>
+        <span class="icon icon-auth-icon-person form_auth__icon form_auth__icon_person_forgotpass"></span>
+        <div class="input__error-cross icon icon-cross-error"></div>
+        <div class="input__valid-cross icon icon-cross-valid"></div>
+      </section>
+      <div class="form_auth__type_block field hidden" id="reset_form_auth__recaptcha"></div>
+      <span class="form_auth__type_success hidden" id="forgotpass_sended">Контрольная строка, а также ваши регистрационные данные были высланы по E-Mail. Пожалуйста, дождитесь прихода письма, так как контрольная строка изменяется при каждом запросе.</span>
+      <section class="form_auth__submit-forgotpass_block">
+        <button type="submit" class="form_auth__button form_auth__button_forgotpass"><span>Выслать пароль</span></button>
+        <button class="form_auth__button form_auth__button_authorize"><span>Отмена</span></button>
+      </section>
+    </article>
+  </div>
+
+  <div class="form_auth__create-new">
+    <div class="auth-options__container top-menu__auth-options">
+      <div class="auth-options__items">
+        
+
+
+
+
+
+  <a href="/v3/account/connect/amo/start?lang=ru&force_auth=1"   class="auth-item__container amo-auth-item__container auth-options__item" 
+>
+
+      <div class="auth-item__icon">
+        <svg class="amo-auth-item__icon" width="62" height="19" viewBox="0 0 62 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M22.0662 9.23044C22.4939 9.23044 22.7078 9.76618 22.7078 10.8377C22.6566 11.5918 22.4069 12.3201 21.983 12.9515C21.462 13.8043 20.8064 14.5709 20.0406 15.2226C19.2371 15.9162 18.3345 16.491 17.3615 16.9288C16.472 17.3518 15.4987 17.5784 14.5102 17.5926C13.2508 17.5926 12.4073 16.5095 11.9796 14.3433C11.3726 15.3338 10.5438 16.1761 9.55595 16.8065C8.34317 17.5023 6.9497 17.8362 5.54625 17.7673C4.80012 17.7996 4.0553 17.6796 3.35894 17.415C2.66259 17.1503 2.02988 16.7468 1.5009 16.23C1.00109 15.7399 0.610097 15.1537 0.352482 14.5083C0.094868 13.8629 -0.0237952 13.1723 0.00394968 12.4798C0.00394968 8.52 1.34646 5.39874 4.03147 3.11602C4.95475 2.27789 6.03919 1.62856 7.22141 1.206C8.2313 0.899768 9.28298 0.746596 10.3401 0.751783C11.2669 0.722399 12.1863 0.922687 13.0132 1.33411C13.3459 0.658611 13.726 0.320862 14.1537 0.320862C14.6021 0.335344 15.043 0.437007 15.4509 0.619946C15.8588 0.802886 16.2255 1.06345 16.5299 1.38652C16.8428 1.63193 17.1027 1.93597 17.2944 2.2809C17.4861 2.62584 17.6059 3.00475 17.6466 3.39554C17.2188 4.34463 16.7307 5.26651 16.1853 6.15576C15.9659 7.64811 15.8705 9.15547 15.9002 10.663C15.9002 12.604 16.1497 13.5746 16.6487 13.5746C17.2665 13.5746 18.7634 12.3633 21.1395 9.94088C21.5672 9.46725 21.8761 9.23044 22.0662 9.23044ZM5.24329 11.3268C5.24329 13.1204 5.92049 14.0172 7.27487 14.0172C8.72431 13.9939 9.92425 13.2368 10.8747 11.7461C11.2401 11.1596 11.5163 10.524 11.6945 9.85935C11.6553 7.60323 11.8947 5.35075 12.4073 3.15096C10.4847 3.52022 8.72769 4.46893 7.3818 5.8646C6.67131 6.58893 6.11603 7.44544 5.74874 8.38358C5.38145 9.32172 5.20958 10.3225 5.24329 11.3268Z" fill="white"/>
+    <path d="M37.7825 6.85471C37.7825 6.07828 37.331 5.69006 36.4281 5.69006C35.8103 5.69006 35.1212 6.27239 34.3609 7.43704C33.6045 8.60322 33.0505 9.88422 32.7213 11.228V11.2979C32.7271 12.1264 32.8531 12.9499 33.0956 13.7436C33.2906 14.3093 33.4162 14.8958 33.4698 15.4906C33.4698 16.267 32.46 17.0435 30.4403 17.8199C30.18 17.9261 29.9023 17.9852 29.6205 17.9946C29.3409 18.002 29.0671 17.9161 28.8437 17.7511C28.6203 17.5861 28.4607 17.3517 28.3909 17.0862C28.1365 16.2898 28.022 15.4569 28.0523 14.6229C28.0523 13.5864 28.082 12.6158 28.1414 11.7113C28.2008 10.8068 28.2602 9.95656 28.3196 9.16072C28.379 8.38428 28.4384 7.69714 28.4978 7.09929C28.5572 6.50143 28.5869 6.0181 28.5869 5.6493C28.5869 4.87286 28.2186 4.48465 27.482 4.48465C26.7454 4.48465 25.89 5.3329 24.9158 7.02941C23.9416 8.71815 23.4545 10.0575 23.4545 11.0475C23.4457 11.9745 23.5717 12.898 23.8287 13.7902C24.0237 14.3559 24.1494 14.9424 24.203 15.5372C24.203 16.3136 23.1931 17.09 21.1734 17.8665C20.9131 17.9726 20.6354 18.0318 20.3536 18.0412C20.0743 18.0475 19.801 17.9613 19.5778 17.7964C19.3547 17.6315 19.1948 17.3977 19.124 17.1328C18.8577 16.2251 18.7434 15.2811 18.7854 14.3376C18.7284 11.9437 18.8595 9.54913 19.1775 7.17499C19.5429 4.98117 20.3682 2.88539 21.6011 1.01981C21.7305 0.755511 21.9256 0.527372 22.1685 0.356407C22.4114 0.185442 22.6943 0.0771492 22.9911 0.0415039C23.7832 0.0415039 24.5079 0.670415 25.1653 1.92824C25.3374 2.2168 25.4807 2.52103 25.593 2.83667C26.0492 2.20168 26.6515 1.68099 27.3512 1.31677C28.051 0.952552 28.8284 0.755059 29.6205 0.740294C30.6282 0.735273 31.6034 1.08913 32.3649 1.73607C32.7445 2.03583 33.0489 2.41686 33.2549 2.84992C33.4608 3.28297 33.5628 3.75654 33.553 4.23425V4.61858C34.1653 3.79467 34.9678 3.12455 35.895 2.66302C36.8221 2.2015 37.8475 1.96168 38.8874 1.96318C39.4173 1.9277 39.9492 1.99706 40.4513 2.16713C40.9533 2.33719 41.4154 2.60449 41.81 2.95313C42.1354 3.26695 42.3918 3.64273 42.5634 4.05734C42.735 4.47196 42.8183 4.91662 42.808 5.36396C42.8155 6.23033 42.744 7.09562 42.5941 7.94948C42.4516 8.72592 42.2912 9.448 42.113 10.1157C41.9347 10.7835 41.7744 11.3833 41.6318 11.9151C41.5102 12.3127 41.4384 12.7234 41.4179 13.138C41.4179 13.4292 41.513 13.5747 41.7031 13.5747C42.2068 13.5066 42.6719 13.2725 43.0218 12.9109C43.5446 12.4683 44.0673 11.985 44.5901 11.4609L46.0336 10.0109C46.4731 9.57611 46.7721 9.35871 46.9305 9.35871C47.2632 9.35871 47.4295 9.74693 47.4295 10.5234C47.4295 12.1539 46.5919 13.7378 44.9168 15.2751C43.5131 16.7058 41.5944 17.5417 39.5705 17.6044C37.8597 17.6044 37.0043 16.0787 37.0043 13.0274C37.0393 11.9583 37.1705 10.8943 37.3964 9.84786C37.6106 8.86256 37.7398 7.86129 37.7825 6.85471Z" fill="white"/>
+    <path d="M58.8115 14.8912C56.6909 17.2205 54.4204 18.0302 51.8245 18.0302C49.2286 18.0302 47.2326 17.3721 45.9258 16.0386C45.2808 15.392 44.7774 14.6231 44.4464 13.7789C44.1154 12.9348 43.9639 12.0332 44.0011 11.1296C43.9257 8.49494 44.8823 5.93197 46.6742 3.96702C47.5569 2.98512 48.6511 2.20776 49.8778 1.69112C51.1044 1.17449 52.4328 0.931487 53.767 0.979688C54.859 0.944395 55.9479 1.11439 56.9747 1.48049C58.3766 2.03952 59.0776 2.56361 59.0776 3.05277C59.0776 3.44098 58.0974 3.63509 56.1371 3.63509C55.2218 3.61877 54.3129 3.78714 53.4667 4.12974C52.6206 4.47235 51.8553 4.98187 51.2186 5.62664C50.5636 6.28305 50.0508 7.06246 49.7109 7.91806C49.3709 8.77366 49.2109 9.68778 49.2405 10.6055C49.2098 11.5694 49.5465 12.5098 50.185 13.2435C50.525 13.6043 50.9432 13.8858 51.409 14.0673C51.8747 14.2487 52.376 14.3253 52.8759 14.2916C53.8803 14.3277 54.8747 14.0855 55.7451 13.5929C54.9288 13.0691 54.2659 12.3456 53.8221 11.4939C53.3783 10.6421 53.1689 9.69163 53.2145 8.73626C53.1983 7.59832 53.6401 6.49993 54.4442 5.67905C54.849 5.22944 55.3488 4.87155 55.9089 4.63022C56.469 4.38888 57.0759 4.26988 57.6876 4.28147C59.0063 4.28147 59.9508 4.63669 60.5211 5.34713C61.1478 6.22582 61.4496 7.28798 61.3765 8.35775C61.2096 10.7468 60.4565 13.1208 58.8115 14.8912ZM58.2578 10.7045C58.6387 9.94262 58.8416 9.10714 58.8519 8.25875C58.8519 7.48232 58.5905 7.0941 58.0677 7.0941C57.8539 7.0941 57.6757 7.24551 57.5331 7.54832C57.3979 7.82079 57.325 8.11887 57.3193 8.4218C57.3065 8.84867 57.3831 9.27358 57.5446 9.67023C57.706 10.0669 57.9488 10.4268 58.2578 10.7278V10.7045Z" fill="white"/>
+  </svg>
+
+    </div>
+  
+  <div>Войти через мессенджер</div>
+
+  </a>
+      </div>
+      <div class="auth-options__sign-up-container">
+        <div class="auth-options__sign-up-prompt">Еще нет amoCRM?</div>
+        <button class="auth-options__sign-up-button js-auth-form-sigh-up-button" type="button">Создать</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="js-mfa form_auth__type_block-mfa hidden">
+  <div class="form_auth__type_block-mfa-info">
+    <p class="form_auth__type_block-mfa-text">Введите 6-значный код, отправленный на ваш email </p>
+        <p class="js-mfa-email form_auth__type_block-mfa-mail"></p>
+  </div>
+
+  <form id="mfa" class="form_auth__type_block-mfa-form" target="_top" action="" novalidate>
+    <div class="form_auth__type_block-mfa-wrapper">
+              <label class="form_auth__type_block-mfa-wrapper-item">
+          <input class="form_auth__type_block-mfa-input" autocomplete="off" data-id="1" maxlength="1" tabindex="0" name="AUTH_CODE" type="tel">
+        </label>
+              <label class="form_auth__type_block-mfa-wrapper-item">
+          <input class="form_auth__type_block-mfa-input" autocomplete="off" data-id="2" maxlength="1" tabindex="-1" name="AUTH_CODE" type="tel">
+        </label>
+              <label class="form_auth__type_block-mfa-wrapper-item">
+          <input class="form_auth__type_block-mfa-input" autocomplete="off" data-id="3" maxlength="1" tabindex="-1" name="AUTH_CODE" type="tel">
+        </label>
+              <label class="form_auth__type_block-mfa-wrapper-item">
+          <input class="form_auth__type_block-mfa-input" autocomplete="off" data-id="4" maxlength="1" tabindex="-1" name="AUTH_CODE" type="tel">
+        </label>
+              <label class="form_auth__type_block-mfa-wrapper-item">
+          <input class="form_auth__type_block-mfa-input" autocomplete="off" data-id="5" maxlength="1" tabindex="-1" name="AUTH_CODE" type="tel">
+        </label>
+              <label class="form_auth__type_block-mfa-wrapper-item">
+          <input class="form_auth__type_block-mfa-input" autocomplete="off" data-id="6" maxlength="1" tabindex="-1" name="AUTH_CODE" type="tel">
+        </label>
+          </div>
+
+    <div class="form_auth__type_block form-block__wrap-mfa-recaptcha field hidden" id="form_mfa__recaptcha"></div>
+
+    <div class="form_auth__type_block-mfa-submit">
+      <button class="form_auth__button_submit-mfa form_auth__button_submit" id="form_auth__button_submit-mfa" type="submit">
+        <span>Подтвердить</span>
+        <span class="spinner-icon"></span>
+      </button>
+
+      <button type="button" class="js-mfa-back form_auth__button_submit form_auth__button_submit-mfa form_auth__button_submit-mfa-cancel form_auth__button_submit">Отменить</button>
+    </div>
+
+    <div class="form_auth__type_block-mfa-submit-resend-wrapper">
+      <div>
+        <div class="form_auth__type_block-mfa-resend-wrapper">
+          <span class="form_auth__type_block-mfa-resend">Отправить код снова</span>
+
+          <span class="js-oauth-loader auth_mfa-resend-loader mfa-spinner-icon hidden"></span>
+        </div>
+
+        <div class="js-oauth-timer-wrapper form_auth__type_block-mfa-sent hidden">
+          <span>Отправить код повторно через</span>
+          <span class="js-oauth-timer"></span>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+      </div>
+
+      <section id="main-menu" class="main-menu ">
+        <div class="main-menu__column main-menu__column-1 bellows">
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item"><a class="main-menu__header_link" href="/new/">Весна 2023</a></li>
+          </ul>
+
+          <ul class="main-menu__header_list bellows__item">
+            <li class="main-menu__header_item bellows__header"><span class="icon icon-arrow-down"></span>Тур по продукту</li>
+            <li class="main-menu__header_item"><a class="main-menu__header_link" href="/tour/">Тур по продукту</a></li>
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item"><a href="/tour/#pipeline" class="main-menu__minor_link">Воронка продаж</a></li>
+                <li class="main-menu__minor_item"><a href="/tour/#website-integration" class="main-menu__minor_link">Интеграция с сайтом</a></li>
+                <li class="main-menu__minor_item"><a href="/tour/#mobile-app" class="main-menu__minor_link">Мобильное приложение</a></li>
+                <li class="main-menu__minor_item"><a href="/tour/#mail" class="main-menu__minor_link">Интеграция c почтой</a></li>
+                <li class="main-menu__minor_item"><a href="/tour/#voip" class="main-menu__minor_link">Интеграция с телефонией</a></li>
+                <li class="main-menu__minor_item"><a href="/tour/#chats" class="main-menu__minor_link">Коммуникации</a></li>
+                <li class="main-menu__minor_item"><a href="/tour/#digital-pipeline" class="main-menu__minor_link">Digital воронка</a></li>
+                <li class="main-menu__minor_item"><a href="/tour/#customers" class="main-menu__minor_link">Покупатели</a></li>
+                <li class="main-menu__minor_item"><a href="/tour/#widgets" class="main-menu__minor_link">API и Виджеты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="main-menu__column main-menu__column-2 bellows">
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item"><a href="/buy/" class="main-menu__header_link">Цены</a></li>
+          </ul>
+
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item"><a href="/customers/" class="main-menu__header_link">Отзывы</a></li>
+          </ul>
+
+          <ul class="main-menu__header_list bellows__item">
+            <li class="main-menu__header_item bellows__header"><span class="icon icon-arrow-down"></span>Блог о продажах</li>
+            <li class="main-menu__header_item"><a href="/blog/" class="main-menu__header_link">Блог о продажах</a></li>
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item"><a href="/blog/" class="main-menu__minor_link">Все</a></li>
+                <li class="main-menu__minor_item"><a href="/blog/32/" class="main-menu__minor_link">Исследования отделов продаж</a></li>
+                <li class="main-menu__minor_item"><a href="/blog/24/" class="main-menu__minor_link">Кейсы</a></li>
+                <li class="main-menu__minor_item"><a href="/blog/22/" class="main-menu__minor_link">Инструменты продаж</a></li>
+                <li class="main-menu__minor_item"><a href="/blog/28/" class="main-menu__minor_link">Sales-солянка</a></li>
+                <li class="main-menu__minor_item"><a href="/blog/328/" class="main-menu__minor_link">Энциклопедия amoCRM</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item"><a href="/contacts/" class="main-menu__header_link">Контакты</a></li>
+          </ul>
+
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item"><a href="/jobs/" class="main-menu__header_link">Вакансии</a></li>
+          </ul>
+
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item"><a href="/cases/" class="main-menu__header_link">Кейсы</a></li>
+          </ul>
+        </div>
+
+        <div class="main-menu__column main-menu__column-3 bellows">
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item"><a href="/developers/" target="_blank"  class="main-menu__header_link">Документация API</a></li>
+          </ul>
+
+          <ul class="main-menu__header_list bellows__item">
+            <li class="main-menu__header_item bellows__header top_menu_integrations"><span class="icon icon-arrow-down"></span>API и виджеты</li>
+            <li class="main-menu__header_item"><a href="/extensions/"  class="main-menu__header_link">API и виджеты</a></li>
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item"><a href="/extensions/?group=recommended" class="main-menu__minor_link">Рекомендуемые</a></li>
+                <li class="main-menu__minor_item"><a href="/extensions/?group=phone" class="main-menu__minor_link">Телефония</a></li>
+                <li class="main-menu__minor_item"><a href="/extensions/?group=site" class="main-menu__minor_link">Интеграция с сайтом</a></li>
+                <li class="main-menu__minor_item"><a href="/extensions/?group=mail" class="main-menu__minor_link">Email и SMS рассылки</a></li>
+                <li class="main-menu__minor_item"><a href="/extensions/?group=chats" class="main-menu__minor_link">Онлайн чаты</a></li>
+                <li class="main-menu__minor_item"><a href="/extensions/?group=useful" class="main-menu__minor_link">Полезные сервисы</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="main-menu__header_list bellows__item">
+            <li class="main-menu__header_item bellows__header top_menu_partners_list"><span class="icon icon-arrow-down"></span>Партнеры</li>
+            <li class="main-menu__header_item"><a href="/partners/"  class="main-menu__header_link">Партнеры</a></li>
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item"><a href="/partners/?group=complex" class="main-menu__minor_link">Комплексное внедрение</a></li>
+                <li class="main-menu__minor_item"><a href="https://amostart.ru/" class="main-menu__minor_link">Стать партнером</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item"><a href="/support/"  class="main-menu__header_link">Помощь</a></li>
+          </ul>
+        </div>
+
+        <div class="main-menu__column main-menu__column-4">
+          <ul class="main-menu__contacts_main_menu-icons">
+            <li class="main-menu__header_item">Наши контакты</li>
+            <li class="main-menu__minor_list">
+              <ul>
+                  <div class="main-menu__amo-on-desktop-our-contacts-top">
+                    <div class="our_contacts">
+  <ul class="socials socials-clean socials-colored">
+    <li class="socials__item socials__item-colored icon-telegram-colored" data-service="telegram">
+      <a href="https://t.me/amoCRM_Official_bot" target="_blank" rel="noopener noreferrer"></a>
+    </li>
+    <li class="socials__item socials__item-colored icon-vk-colored" data-service="vk">
+      <a href="https://vk.me/-63068509" target="_blank" rel="noopener noreferrer"></a>
+    </li>
+    <li class="socials__item socials__item-colored icon-viber-colored" data-service="viber">
+      <a href="viber://pa?chatURI=amocrm_support" target="_blank" rel="noopener noreferrer"></a>
+    </li>
+    <li class="socials__item socials__item-colored icon-online-chat-colored" data-service="livechat">
+      <span style="cursor: pointer"></span>
+    </li>
+  </ul>
+</div>
+                  </div>
+              </ul>
+          </ul>
+
+          <div class="main-menu__subcolumn main-menu__follow main-menu__item_flex-1">
+            <ul class="main-menu__header_list">
+              <li class="main-menu__header_item main-menu__header_follow-us">Мы в соц. сетях</li>
+            </ul>
+
+            <ul class="socials">
+              <li class="socials__item"><a href="https://twitter.com/amocrm_ru" target="_blank" class="socials__icon_link icon icon-twitter"></a></li>
+              <li class="socials__item"><a href="https://vk.com/amocrm_ru" target="_blank" class="socials__icon_link icon icon-vkontakte"></a></li>
+              <li class="socials__item"><a href="https://www.youtube.com/user/amocrmru" target="_blank" class="socials__icon_link icon icon-youtube"></a></li>
+            </ul>
+
+            <div class="main-menu__amo-on-tablet">
+              <a class="messenger" href="//amo.tm/?utm_source=amocrm" target="_blank" rel="noopener noreferrer">
+  <div class="messenger__logo">
+    <img src="/static/assets/svg/amo.svg" alt="Логотип корпоративного мессенджера amo" class="messenger__logo-icon">
+  </div>
+  <p class="messenger__title">
+    Корпоративный мессенджер
+  </p>
+</a>
+ 
+            </div>
+          </div>
+
+          <div class="main-menu__subcolumn main-menu__legal main-menu__item_flex-2">
+            <p class="main-menu__copyright">QSOFT &#169; 2009-2025<br> Все права защищены</p>
+
+            <ul class="main-menu__terms">
+              <li class="main-menu__terms_item"><a class="main-menu__terms_link" href="/jobs/" target="_blank">Работа в amoCRM</a></li>
+              <li class="main-menu__terms_item"><a class="main-menu__terms_link" href="/agreement/">Лицензионное соглашение</a></li>
+              <li class="main-menu__terms_item"><a class="main-menu__terms_link" href="/confidence/">Политика компании в отношении обработки персональных данных</a></li>
+              <li class="main-menu__terms_item"><a class="main-menu__terms_link" href="/security/">Безопасность и надежность</a></li>
+              <li class="main-menu__terms_item"><a class="main-menu__terms_link" href="/google-disclosure/">Раскрытие информации Google</a></li>
+                          </ul>
+
+            <div class="main-menu__amo-on-desktop">
+              <a class="messenger" href="//amo.tm/?utm_source=amocrm" target="_blank" rel="noopener noreferrer">
+  <div class="messenger__logo">
+    <img src="/static/assets/svg/amo.svg" alt="Логотип корпоративного мессенджера amo" class="messenger__logo-icon">
+  </div>
+  <p class="messenger__title">
+    Корпоративный мессенджер
+  </p>
+</a>
+ 
+            </div>
+          </div>
+        </div>
+
+        <div class="main-menu__amo-on-mobile">
+          <a class="messenger" href="//amo.tm/?utm_source=amocrm" target="_blank" rel="noopener noreferrer">
+  <div class="messenger__logo">
+    <img src="/static/assets/svg/amo.svg" alt="Логотип корпоративного мессенджера amo" class="messenger__logo-icon">
+  </div>
+  <p class="messenger__title">
+    Корпоративный мессенджер
+  </p>
+</a>
+ 
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+  
+
+
+<div id="page_overlay" class="page_overlay"></div>
+
+<div class="page_wrapper developers">
+    <div class="agreement-page">
+  <div class="page_holder">
+    <div class="page_holder__inner">
+      <div class="page_header feature__wrapper">
+        <div class="feature__inner">
+          <div class="feature__block">
+            <div class="feature__content" id="feature">
+              <div class="feature__header">Раздел для разработчиков</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page_content clearfix">
+        <aside class="page_aside">
+          <nav class="nav_aside" role="navigation">
+  <ul class="nav_aside__list custom_list">
+
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        CRM Platform
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/crm_platform/platform-abilities">
+                Возможности
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/crm_platform/api-php-library">
+                Библиотека на PHP для работы с API
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem colapse_block ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/crm_platform/api-reference">
+                API Reference
+                                  <span class="icon-arrow-down colapse_toggler "></span>
+                              </a>
+                          <ul class="nav_aside__sub_list_child custom_list colapse_content" style="display: none;">
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/api/recommendations">
+                      Ограничения и рекомендации
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/account-info">
+                      Параметры аккаунта
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/leads-api">
+                      Сделки
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/unsorted-api">
+                      Неразобранное
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/leads_pipelines">
+                      Воронки и этапы
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/filters-api">
+                      Фильтрация (Alpha)
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/contacts-api">
+                      Контакты
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/companies-api">
+                      Компании
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/catalogs-api">
+                      Списки
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/entity-links-api">
+                      Связи сущностей
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/tasks-api">
+                      Задачи
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/custom-fields">
+                      Поля и группы полей
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/tags-api">
+                      Теги
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/events-and-notes">
+                      События и Примечания
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/customers-api">
+                      Покупатели
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/customers-statuses-api">
+                      Статусы и сегменты покупателей
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/users-api">
+                      Пользователи
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/products-api">
+                      Товары
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/webhooks-api">
+                      Вебхуки
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/widgets-api">
+                      Виджеты
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/calls-api">
+                      Добавление звонков
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/talks-api">
+                      Беседы
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/subscriptions-api">
+                      Подписчики сущности
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/sources-api">
+                      Источники
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/api/salesbot-api">
+                      Salesbot
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/short_links">
+                      Работа с короткими ссылками
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/chat-templates-api">
+                      Шаблоны ответов в чаты
+                    </a>
+                  </li>
+                                  <li class="nav_aside__subitem">
+                    <a class="nav_aside__subitem_link" style="padding: 4px 24px;" href="https://www.amocrm.ru/developers/content/crm_platform/duplication-control">
+                      Контроль дублей
+                    </a>
+                  </li>
+                              </ul>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/crm_platform/subject_area">
+                Предметная область amoCRM
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/crm_platform/error-codes">
+                Коды ошибок
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/crm_platform/webhooks-format">
+                Webhooks
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/crm_platform/separate-platforms">
+                Разделение amocrm.ru и amocrm.com
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        oAuth
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/oauth">
+                oAuth 2.0
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/switch-over-oauth">
+                Переход на oAuth
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/scopes">
+                Разрешения и права
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/step-by-step">
+                Пример по шагам
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/easy-auth">
+                Упрощенная авторизация
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/lib">
+                Библиотека
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/button">
+                Кнопка на сайт
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/auth-public-integrations">
+                Авторизация в публичных интеграциях
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/exchange-api-key">
+                Метод обмена API ключей
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/account-subdomain-info">
+                Информация о домене аккаунта
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/disposable-tokens">
+                Одноразовые токены для интеграций
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/oauth/oauth-external-integrations">
+                Внешние интеграции
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        Интеграции
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/release-spring-2022">
+                Релиз ВЕСНА 2022
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/intro">
+                Начало работы
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/requirements">
+                Требования к публичным интеграциям
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/script_js">
+                JS-Виджет
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/structure">
+                Структура виджета
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/upload">
+                Загрузка виджета
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/moderation">
+                Модерация и публикация виджета
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/advertising">
+                Рекламное размещение
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/fields">
+                Типы полей
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/custom_settings">
+                Расширенные настройки
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/catalogs_sdk">
+                SDK списков
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/sdk_card">
+                SDK карточки
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/areas">
+                Области подключения виджетов
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/salesbot_widget">
+                Интеграция виджета в Salesbot
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/system_sms">
+                Отправка системных SMS
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/mobile-widgets">
+                Виджеты на мобильных устройствах
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/amoforms-widgets">
+                Виджеты в веб-формах
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/integrations/banks-and-acquiring">
+                Интеграции с эквайрингами и платежными системами
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        Digital Pipeline
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/digital_pipeline/webhooks">
+                WebHooks
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/digital_pipeline/integrations">
+                Разработка собственных интеграций
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/digital_pipeline/salesbot">
+                Salesbot
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/digital_pipeline/site_visit">
+                Интеграция с API
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/digital_pipeline/feedback_button">
+                Кнопка обратной связи
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        API Списки
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/catalogs/capabilities">
+                Возможности
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/catalogs/products">
+                Товары
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        API Телефонии
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/telephony/capabilities-2">
+                Возможности
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/telephony/integration">
+                Пример интеграции
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/telephony/call_event">
+                Уведомление о звонке
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block expanded ">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        API Чатов
+                  <span class="icon-arrow-down upward"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: block;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/chats/chat-capabilities">
+                Возможности
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/chats/chat-start">
+                Начало работы
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem active_subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/chats/chat-step-by-step">
+                Пример по шагам
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/chats/chat-api-reference">
+                Методы API чатов
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/chats/chat-webhooks">
+                Форматы вебхуков чатов
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        API Файлов
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/files/files-capabilities">
+                Возможности
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/files/files-api">
+                Методы API
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        API Центра нотификаций
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/notifications/center_capabilities">
+                Возможности
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/notifications/adding_notifications">
+                Добавление нотификаций
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/notifications/js-subscribe">
+                Подписка на уведомления
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link colapse_toggler" href="#">
+        WEB SDK
+                  <span class="icon-arrow-down"></span>
+              </a>
+              <ul class="nav_aside__sub_list custom_list colapse_content" style="display: none;">
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/start">
+                Возможности
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/mechanics">
+                Механика работы
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/env_variables">
+                Переменные окружения
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/system_modules">
+                Системные модули
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/init_once">
+                Init_once виджеты
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/js_sdk">
+                JS SDK
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/left_menu">
+                Левое меню и подразделы
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/dashboard">
+                Рабочий стол
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/card">
+                Интерфейс карточки
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/list">
+                Интерфейс списков
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/todo_sync">
+                Синхронизация задач
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/digital_pipeline">
+                Digital Pipeline
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/salesbot-2">
+                Salesbot
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/crm_plugin">
+                API CRM Plugin
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/forms">
+                API формы
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/settings">
+                Работа виджета в разделе интеграций
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/lead_scraper">
+                Chrome Парсер
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/dark_theme">
+                Темная тема
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/personal_page">
+                Кабинет клиента
+                              </a>
+                        </li>
+                      <li class="nav_aside__subitem  ">
+              <a class="nav_aside__subitem_link " href="https://www.amocrm.ru/developers/content/web_sdk/industry-solutions">
+                Отраслевые решения
+                              </a>
+                        </li>
+                  </ul>
+          </li>
+        <li class="nav_aside__item colapse_block">
+      <a class="nav_aside__item_link " href="https://www.amocrm.ru/developers/content/changelog/main">
+        Changelog
+              </a>
+          </li>
+      </ul>
+</nav>
+        </aside>
+        <main class="page_main" role="main">
+          <section class="page_section">
+            <div class="wrapper_inner">
+              <div class="search__wrapper">
+    <div class="search-form__wrapper">
+        <form role="search" method="get" class="search-form" action="/developers">
+                        <input type="hidden" value="def50200aa0a7bd5a37e84e993d2ec87229e013d20370c77dfefe57cb3caeccbb543c586c740e67ae6296d58bb9f285f74cc1ca00af3670de42c9582a96ed9a41f5325437f44eb208d814ec667ea39ef80d6c96c1e7026cf5f75eb02248f4e58c2bf9d8442d21ac9a938907dcb6c5f04ad18851dc01f6075dd806d70a290cdb3b136e4ab6171e5fe843cd15108f4e508a014003fb4988735682213b2533aec278da52fba433a4feba40c0d40f3f99d5ff188f869ec96b7a0c6e93715c68506e9cb228b517af84b50eca210071201be12ecf562753d713643cd4efe1e1b7da7af5db07e3950f439463d4feee78e35cfaa9bcf494200459fdc25aaad1b76a089fb344292ab908e7e88e12033" name="csrf_token">
+            <label>
+                <input required type="search"
+                       minlength="3"
+                       autocomplete="off"
+                       class="search-form__input"
+                       placeholder="Поиск по разделу"
+                       value=""
+                       name="s"
+                       title="Поиск по разделу"/>
+            </label>
+            <input type="submit" class="search-form__submit feature__button"
+                   value="Найти"/>
+            <input type="hidden" value="developers" name="post_type" id="post_type"/>
+        </form>
+        <div class="search-results_hovered"></div>
+    </div>
+
+    <div class="search-results__wrapper">
+        <div class="search-results"></div>
+        <div class="search-results__closer"></div>
+    </div>
+</div>
+
+              <div class="page_section__inner">
+                                  <div class="content-block content-block_grey">
+  <div class="content-block__inner">
+    <div class="content-block__title">
+      <span class="content-block__title_large">
+                  Пример по шагам
+              </span>
+    </div>
+    <div class="content-block__text">
+      <p>В данном разделе мы рассмотрим основной функционал любой интеграции в API Чатов, а также разберем остальной функционал,<br />
+который интеграция может реализовать по необходимости.</p>
+<p>Мы разберем в этой статье как создать самую простую, но рабочую интеграцию с API Чатов, а также функции,<br />
+которые могут быть полезны для больших, тиражируемых решений.</p>
+<p>Любая интеграция, для корректной работы с API чатов, должна реализовать следующий функционал:</p>
+<ul>
+<li><a href="#Подключение-канала-к-аккаунту">Подключение канала к аккаунту</a></li>
+<li><a href="#Отправка-сообщения-из-чата-в-amoCRM">Отправка сообщения из чата в amoCRM</a></li>
+<li><a href="#Получение-сообщения-отправленного-из-amoCRM-разбор-вебхука">Получение сообщения, отправленного из amoCRM, разбор вебхука</a></li>
+<li><a href="#Обновление-статуса-отправки-сообщения">Обновление статуса отправки сообщения</a></li>
+<li><a href="#Отключение-канала-от-аккаунта">Отключение канала от аккаунта</a></li>
+</ul>
+<p>Следующие функции будут уже расширением базового функционала интеграции:</p>
+<ul>
+<li><a href="#Разработка-тиражируемого-решения">Разработка тиражируемого решения</a></li>
+<li><a href="#Поддержка-и-создание-множественных-источников">Поддержка и создание множественных источников</a></li>
+<li><a href="#Связывание-нового-чата-с-существующим-контактом">Связывание нового чата с существующим контактом</a> </li>
+<li><a href="#Импорт-существующей-переписки">Импорт существующей переписки</a></li>
+<li><a href="#Написать-первым">Написать первым</a></li>
+<li><a href="#Отображение-статуса-печатания-в-карточке-сделки">Отображение статуса печатания в карточке сделки</a></li>
+<li><a href="#Хуки-о-печати-пользователем-amoCRM">Хуки о печати пользователем amoCRM</a></li>
+<li><a href="#Получение-истории-сообщений-чата">Получение истории сообщений чата</a></li>
+<li><a href="#Поддержка-реакций">Поддержка реакций</a></li>
+</ul>
+<p>В данной статье будут представлены примеры кода на PHP.<br />
+Все примеры можно скачать <a href="https://www.amocrm.ru/uploads/2021/09/chats_api_example.zip">по ссылке</a>.<br />
+Для уменьшения дублирования кода представим,<br />
+что у нас уже есть файл со вспомогательными методами helpers.php:</p>
+<div class="content-block__text_code">
+<pre><code class="language-php">&lt;?php
+
+/**
+ * Расчитываем хэш тела запроса
+ * @param string $body Тело запроса в строковом представлении (json)
+ *
+ * @return string
+ */
+function createBodyChecksum(string $body): string
+{
+    return md5($body);
+}
+
+/**
+ * Расчитываем подпись запроса
+ *
+ * @param string $secret Секретный ключ вашего канала
+ * @param string $checkSum Рассчитанный хэш тела запроса
+ * @param string $apiMethod Адрес вызываемого метода API
+ * @param string $httpMethod HTTP метод запроса
+ * @param string $contentType Передаваемый тип данных
+ *
+ * @return string
+ */
+function createSignature(
+    string $secret,
+    string $checkSum,
+    string $apiMethod,
+    string $httpMethod = 'POST',
+    string $contentType = 'application/json'
+): string {
+    $str = implode("\n", [
+        strtoupper($httpMethod),
+        $checkSum,
+        $contentType,
+        date(DateTimeInterface::RFC2822),
+        $apiMethod,
+    ]);
+
+    return hash_hmac('sha1', $str, $secret);
+}
+
+/**
+ * Подготавливаем заголовки для запроса
+ *
+ * @param string $checkSum Рассчитанный хэш тела запроса
+ * @param string $signature Рассчитанная подпись запроса
+ * @param string $contentType Передаваемый тип данных
+ *
+ * @return array
+ */
+function prepareHeaderForCurl(
+    string $checkSum,
+    string $signature,
+    string $contentType = 'application/json'
+): array {
+    $headers = [
+        'Date' =&gt; date(DateTimeInterface::RFC2822),
+        'Content-Type' =&gt; $contentType,
+        'Content-MD5' =&gt; strtolower($checkSum),
+        'X-Signature' =&gt; strtolower($signature),
+        'User-Agent' =&gt; 'amoCRM-Chats-Doc-Example/1.0'
+    ];
+
+    foreach ($headers as $name =&gt; $value) {
+        $curlHeaders[] = $name . ": " . $value;
+    }
+
+    return $curlHeaders;
+}
+
+/**
+ * Выполняем запрос к API Чатов
+ *
+ * @param string $apiMethod Запрашиваемый метод API
+ * @param string $requestBody Тело запроса
+ * @param array $requestHeaders Заголовки запроса
+ * @param string $httpMethod HTTP метод запроса
+ */
+function execCurl(
+    string $apiMethod,
+    string $requestBody,
+    array $requestHeaders,
+    string $httpMethod = 'POST'
+): void {
+    $curl = curl_init();
+    $curlOptions = [
+        CURLOPT_URL =&gt; 'https://amojo.amocrm.ru' . $apiMethod,
+        CURLOPT_RETURNTRANSFER =&gt; true,
+        CURLOPT_TIMEOUT =&gt; 5,
+        CURLOPT_HTTP_VERSION =&gt; CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST =&gt; $httpMethod,
+        CURLOPT_HTTPHEADER =&gt; $requestHeaders,
+    ];
+
+    if (!empty($requestBody)) {
+        $curlOptions[CURLOPT_POSTFIELDS] = $requestBody;
+    }
+
+    curl_setopt_array($curl, $curlOptions);
+
+    $response = curl_exec($curl);
+    $error = curl_error($curl);
+    $info = curl_getinfo($curl);
+    curl_close($curl);
+    if ($error) {
+        echo "cURL Error #:" . $error;
+    } else {
+        echo "Status: " . $info['http_code'] . PHP_EOL;
+        echo $response . PHP_EOL;
+    }
+}
+</code></pre>
+</div>
+<h3 id="Подключение-канала-к-аккаунту">Подключение канала к аккаунту</h3>
+<p>После создания канала, необходимо выполнить подключение канала к аккаунту.<br />
+Для этого необходимо воспользоваться <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Подключение-канала-чата-в-аккаунте">методом подключения канала</a>.<br />
+Важно отметить, если ваш канал еще не является публичным, то возможность подключения ограниченна перечисленными при регистрации аккаунтами.</p>
+<p>После подключения канала к аккаунту, вы получите <strong>scope_id</strong>, который необходимо использовать для дальнейших запросов.</p>
+<p>Рассмотрим пример кода:</p>
+<div class="content-block__text_code">
+<pre><code class="language-php">&lt;?php
+
+include __DIR__ . '/helpers.php';
+
+// Секретный ключ канала
+$channelSecret = 'f2d7f8704eff95087ed45b23ba99c0b5aac8278e';
+// ID канала в сервисе чатов, который подключаем к каналу
+$channelId = '344a5002-f8ca-454d-af3d-396180102ac7';
+// Тело запроса
+$requestBody = [
+    'account_id' =&gt; '52e591f7-c98f-4255-8495-827210138c81',
+    'title' =&gt; 'ChatsIntegration',
+    'hook_api_version' =&gt; 'v2',
+];
+$jsonBody = json_encode($requestBody);
+$checkSum = createBodyChecksum($jsonBody);
+$apiMethod = sprintf('/v2/origin/custom/%s/connect', $channelId);
+
+// Составим подпись
+$signature = createSignature(
+    $channelSecret,
+    $checkSum,
+    $apiMethod
+);
+
+// Подготовим заголовки
+$curlHeaders = prepareHeaderForCurl($checkSum, $signature);
+
+echo 'POST ' . $apiMethod . PHP_EOL;
+foreach ($curlHeaders as $header) {
+    echo $header . PHP_EOL;
+}
+echo PHP_EOL . $jsonBody . PHP_EOL . PHP_EOL;
+
+// Выполним запрос
+execCurl($apiMethod, $jsonBody, $curlHeaders);
+</code></pre>
+</div>
+<h4 id="Запрос">Запрос</h4>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST https://amojo.amocrm.ru/v2/origin/custom/344a5002-f8ca-454d-af3d-396180102ac7/connect
+Date: Wed, 15 Dec 2021 23:12:55 +0000
+Content-Type: application/json
+Content-MD5: 2fbcb3c652b61e24e004daddfc73d0ce
+X-Signature: 81211856ce0c5095f3e1a90c0a38dc9d736cfd55
+User-Agent: amoCRM-Chats-Doc-Example/1.0</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "account_id": "52e591f7-c98f-4255-8495-827210138c81",
+  "title": "ChatsIntegration",
+  "hook_api_version": "v2"
+}</code></pre>
+</div>
+<h4 id="Ответ">Ответ</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "account_id": "52e591f7-c98f-4255-8495-827210138c81",
+  "scope_id": "344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81",
+  "title": "ChatsIntegration",
+  "hook_api_version": "v2"
+}</code></pre>
+</div>
+<h3 id="Отправка-сообщения-из-чата-в-amoCRM">Отправка сообщения из чата в amoCRM</h3>
+<p>После подключения канала к аккаунту, вы получите возможность пользоваться методом API.<br />
+Один из первых методов, с которым вы столкнетесь &#8211; отправка сообщения из чата в amoCRM.</p>
+<p>Для отправки необходимо воспользоваться <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Отправка-или-импорт-сообщения">методом добавления сообщений</a>.</p>
+<p>Данный метод позволяет как добавлять входящие сообщение, так и исходящие, в данном разделе рассмотрим кейс входящего сообщения из стороннего чата в amoCRM.</p>
+<p>Также стоит отметить, что API чатов не принимает несколько сообщений с одинаковым payload[msgid].<br />
+А также при передаче payload[conversation_id], которого ранее не было в системе &#8211; будет создан новый чат.</p>
+<p>Рассмотрим пример кода:</p>
+<div class="content-block__text_code">
+<pre><code class="language-php">&lt;?php
+
+include __DIR__ . '/helpers.php';
+
+// Секретный ключ канала
+$channelSecret = 'f2d7f8704eff95087ed45b23ba99c0b5aac8278e';
+// Scope ID, который был получен при подключении канала в аккаунт
+$scopeId = '344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81';
+// Тело запроса, отправим сообщение в amoCRM, которое написал нам клиент
+$requestBody = [
+    'event_type' =&gt; 'new_message',
+    'payload' =&gt; [
+        'timestamp' =&gt; time(),
+        'msec_timestamp' =&gt; round(microtime(true) * 1000),
+        'msgid' =&gt; 'my_int-5f2836a8ca481',
+        'conversation_id' =&gt; 'my_int-d5a421f7f218',
+        'sender' =&gt; [
+            'id' =&gt; 'my_int-1376265f-86df-4c49-a0c3-a4816df41af8',
+            'avatar' =&gt; 'https://images.pexels.com/photos/10050979/pexels-photo-10050979.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500',
+            'profile' =&gt; [
+                'phone' =&gt; '+79151112233',
+                'email' =&gt; 'example.client@example.com',
+            ],
+            'profile_link' =&gt; 'https://example.com/profile/example.client',
+            'name' =&gt; 'Вася клиент',
+        ],
+        'message' =&gt; [
+            'type' =&gt; 'text',
+            'text' =&gt; 'Сообщение от клиента',
+        ],
+        'silent' =&gt; false,
+    ],
+];
+$jsonBody = json_encode($requestBody);
+$checkSum = createBodyChecksum($jsonBody);
+$apiMethod = sprintf('/v2/origin/custom/%s', $scopeId);
+
+// Составим подпись
+$signature = createSignature(
+    $channelSecret,
+    $checkSum,
+    $apiMethod
+);
+
+// Подготовим заголовки
+$curlHeaders = prepareHeaderForCurl($checkSum, $signature);
+
+echo 'POST ' . $apiMethod . PHP_EOL;
+foreach ($curlHeaders as $header) {
+    echo $header . PHP_EOL;
+}
+echo PHP_EOL . $jsonBody . PHP_EOL . PHP_EOL;
+
+// Выполним запрос
+execCurl($apiMethod, $jsonBody, $curlHeaders);
+</code></pre>
+</div>
+<h4 id="Запрос">Запрос</h4>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST https://amojo.amocrm.ru/v2/origin/custom/344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81
+Date: Thu, 16 Dec 2021 13:15:29 +0000
+Content-Type: application/json
+Content-MD5: 223ef85def871bc7cb58aa6f02f0a26e
+X-Signature: 29b49e9eaf03f13a66ecaff315f2855b31b25eee
+User-Agent: amoCRM-Chats-Doc-Example/1.0</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<p>Разберем некоторые из параметров запроса, которые могут вызывать вопросы:</p>
+<ul>
+<li>payload[msgid] &#8211; в данном поле передаем ID сообщения на стороне вашей интеграции</li>
+<li>payload[conversation_id] &#8211; ID чата на стороне вашей интеграции</li>
+<li>payload[sender][id] &#8211; ID отправителя сообщения на стороне вашей интеграции</li>
+<li>payload[sender][avatar] &#8211; ссылка на аватар пользователя, спустя небольшое время после передачи сообщения, мы сделаем GET запрос на указанный адрес, чтобы скачать изображение</li>
+<li>payload[sender][profile] &#8211; объект с телефоном и email пользователя, поле опционально для передачи в запросе. При создании нового контакта, будут использованы для контроля дублей и зафиксируются в созданной карточке контакта.</li>
+<li>payload[sender][profile_link] &#8211; ссылка на профиль клиента, в данный момент нигде не выводится</li>
+</ul>
+<p>Для передачи сообщений с медиа вложениями, необходимо в message[type] указать необходимый тип и передать структуру в соответствии <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Отправка-или-импорт-сообщения">со спецификацией метода</a>.</p>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "event_type": "new_message",
+  "payload": {
+    "timestamp": 1639660529,
+    "msec_timestamp": 1639660529379,
+    "msgid": "my_int-5f2836a8ca481",
+    "conversation_id": "my_int-d5a421f7f218",
+    "sender": {
+      "id": "my_int-1376265f-86df-4c49-a0c3-a4816df41af8",
+      "avatar": "https://images.pexels.com/photos/10050979/pexels-photo-10050979.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+      "profile": {
+        "phone": "+79151112233",
+        "email": "example.client@example.com"
+      },
+      "profile_link": "https://example.com/profile/example.client",
+      "name": "Вася клиент"
+    },
+    "message": {
+      "type": "text",
+      "text": "Сообщение от клиента"
+    },
+    "silent": false
+  }
+}</code></pre>
+</div>
+<h4 id="Ответ">Ответ</h4>
+<p>В ответе вы получите ID сообщения на стороне amoCRM (new_message[msgid]).</p>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "new_message": {
+    "msgid": "8e6afe4e-a08a-4801-b6cb-37963c1a6f3c",
+    "ref_id": "my_int-5f2836a8ca481"
+  }
+}</code></pre>
+</div>
+<h3 id="Получение-сообщения-отправленного-из-amoCRM-разбор-вебхука">Получение сообщения, отправленного из amoCRM, разбор вебхука</h3>
+<p>Когда пользователь отправляет сообщение из amoCRM в ваш канал, мы отправляем на указанный адрес webhook.<br />
+После получения вебхука, вам необходимо обработать его и отправить сообщение в мессенджер.<br />
+Если вы получили сообщение, которое интегрированный мессенджер не может принять, вам необходимо <a href="#Обновление-статуса-отправки-сообщения">обновить статус сообщения</a> на ошибочный.</p>
+<p>Также мы настойчиво рекомендуем обрабатывать сообщения и отправлять в мессенджер вне контекста запроса.<br />
+То есть, при получении вебхука, вы проверяете подпись запроса, а дальше, например, ставите задачу на обработку в очередь и отдаете ответ на вебхук.<br />
+Дальше, уже в асинхронном режиме, вы обрабатываете сообщение, производите вашу бизнес-логику и отправляете сообщение.</p>
+<p>В данный момент мы ждем ответа на хук не больше 5 секунд. Для того чтобы мы посчитали хук успешно отправленным,<br />
+ваша интеграция должна ответить на запрос с http-кодом 200.</p>
+<p>API Чатов имеет механизмы приоритизации, если интеграция начинает долго отвечать на хуки или не отвечать вовсе,<br />
+мы можем вынести отдельно от основного потока сообщений в медленный поток, в котором хуки могут приходить с задержкой.<br />
+Приоритет рассчитывается динамически и зависят от разных факторов, интеграция может перейти как в более быструю очередь, так и в более медленную.</p>
+<p><a href="https://www.amocrm.ru/developers/content/chats/chat-webhooks">Описание формата Webhook&#8217;ов от API Чатов (Webhook Reference)</a></p>
+<p>Рассмотрим пример кода, который обрабатывает структуру полученного хука:</p>
+<div class="content-block__text_code">
+<pre><code class="language-php">&lt;?php
+
+include __DIR__ . '/helpers.php';
+
+// Определим методы, которые выполняют бизнес-логику
+function saveTextMessage(
+    string $messageReceiver,
+    string $chatId,
+    string $text
+) {
+    // Сохраняем текстовое сообщение
+}
+
+function savePictureMessage(
+    string $messageReceiver,
+    string $chatId,
+    array $file,
+    string $messageText
+) {
+    // Сохраняем изображение
+}
+
+function saveFileMessage(
+    string $messageReceiver,
+    string $chatId,
+    array $file,
+    string $messageText
+) {
+    // Сохраняем файл
+}
+
+function downloadFile(string $url): array
+{
+    // сохраняем файл по ссылке на диск, возвращаем информацию о файле
+    return [];
+}
+
+function setErrorDeliveryStatus($messageId) {
+    //Обновляем статус доставки сообщения с информацией, что оно не обработано
+}
+
+// Секретный ключ канала
+$channelSecret = 'f2d7f8704eff95087ed45b23ba99c0b5aac8278e';
+
+if ($_SERVER ['REQUEST_METHOD'] !== 'POST') {
+    throw new RuntimeException('Unsupported request');
+}
+
+//Полученное тело запроса
+$str = file_get_contents('php://input');
+$body = stream_get_contents(STDIN);
+if (empty($body)) {
+    throw new RuntimeException('Empty body');
+}
+$signature = hash_hmac('sha1', $str, $channelSecret);
+
+// Проверяем подпись
+if (!isset($_SERVER['HTTP_X_SIGNATURE']) || $signature !== $_SERVER['HTTP_X_SIGNATURE']) {
+    echo 'Invalid hook';
+    die;
+}
+
+$hookBody = json_decode($body, true);
+if (!$hookBody) {
+    throw new RuntimeException('Unsupported body');
+}
+
+// ID аккаунта в API чатов
+$accountId = $hookBody['account_id'];
+
+// ID сообщения в API чатов
+$messageId = $hookBody['message']['message']['id'];
+// Тип сообщения
+$messageType = $hookBody['message']['message']['type'];
+// Тип сообщения
+$messageText = $hookBody['message']['message']['text'];
+// ID чата, в которое было отправлено сообщение на стороне интеграции
+$messageChatId = $hookBody['message']['conversation']['client_id'];
+// ID чата, в которое было отправлено сообщение на стороне amoCRM
+$messageAmoCrmChatId = $hookBody['message']['conversation']['id'];
+// Ссылка на прикрепленный к сообщению файл
+$fileLink = $hookBody['message']['message']['media'] ?? null;
+// ID получателя на стороне интеграции
+$receiverId = $hookBody['message']['receiver']['id'];
+
+switch ($hookBody['message']['message']['type']) {
+    case 'text':
+        saveTextMessage(
+            $receiverId,
+            $messageChatId,
+            $messageText
+        );
+        break;
+    case 'picture':
+        $downloadedFile = downloadFile($fileLink);
+        savePictureMessage(
+            $receiverId,
+            $messageChatId,
+            $downloadedFile,
+            $messageText
+        );
+        break;
+    case 'file':
+        $downloadedFile = downloadFile($fileLink);
+        saveFileMessage(
+            $receiverId,
+            $messageChatId,
+            $downloadedFile,
+            $messageText
+        );
+        break;
+    default:
+        setErrorDeliveryStatus($messageId);
+        throw new RuntimeException('Unsupported message type');
+        break;
+}</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "account_id": "52e591f7-c98f-4255-8495-827210138c81",
+  "time": 1639572261,
+  "message": {
+    "receiver": {
+      "id": "2ed64e26-70a1-4857-8382-bb066a076219",
+      "phone": "79161234567",
+      "email": "example.client@example.com",
+      "client_id":"my_int-1376265f-86df-4c49-a0c3-a4816df41af8"
+    },
+    "sender": {
+      "id": "76fc2bea-902f-425c-9a3d-dcdac4766090"
+    },
+    "conversation": {
+      "id": "8e4d4baa-9e6c-4a88-838a-5f62be227bdc",
+      "client_id":"my_int-d5a421f7f218"
+    },
+    "source":{
+      "external_id":"78001234567"
+    },
+    "timestamp": 1639572260,
+    "msec_timestamp": 1639572260980,
+    "message": {
+      "id": "0371a0ff-b78a-4c7b-8538-a7d547e10692",
+      "type": "picture",
+      "text": "Текст сообщения Сделка #15926745",
+      "markup": {
+        "mode": "inline",
+        "buttons": [
+          [
+            {
+              "text":"Принять заказ"
+            },
+            {
+              "text":"Отменить заказ"
+            }
+          ]
+        ]
+      },
+      "tag": "",
+      "media": "https://amojo.amocrm.ru/attachments/image.jpg",
+      "thumbnail": "https://amojo.amocrm.ru/attachments/image_320x200.jpg",
+      "file_name": "",
+      "file_size": 0,
+      "template": {
+        "id": 7103,
+        "content": "Текст сообщения {{lead.name}}",
+        "params": [
+          {
+            "key": "{{lead.id}}",
+            "value": "15926745"
+          }
+        ]
+      }
+    }
+  }
+}</code></pre>
+</div>
+<h3 id="Обновление-статуса-отправки-сообщения">Обновление статуса отправки сообщения</h3>
+<p>После получения сообщения, интеграция передает его в мессенеджер.<br />
+Статус сообщения может измениться: сообщение может быть не доставлено или может стать прочитанным.</p>
+<p>Через API чатов можно обновить статус сообщения, а также передать информацию об ошибке.<br />
+Для этого необходимо воспользоваться <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Обновление-статуса-доставки-сообщения">методом обновления статуса сообщения</a>.</p>
+<p>Рассмотрим пример кода, в котором мы обновим сообщение 079e44fb-fc22-476b-9e8a-421b688ec53b и укажем статус &quot;Не доставлено&quot;:</p>
+<div class="content-block__text_code">
+<pre><code class="language-php">&lt;?php
+
+include __DIR__ . '/helpers.php';
+
+// Секретный ключ канала
+$channelSecret = 'f2d7f8704eff95087ed45b23ba99c0b5aac8278e';
+// Scope ID, который был получен при подключении канала в аккаунт
+$scopeId = '344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81';
+// ID сообщения, которое было получено в хуке
+$messageId = '079e44fb-fc22-476b-9e8a-421b688ec53b';
+// Тело запроса, обновим сообщение с информацией об ошибке
+$requestBody = [
+    'msgid' =&gt; '079e44fb-fc22-476b-9e8a-421b688ec53b',
+    'delivery_status' =&gt; -1,
+    'error_code' =&gt; 905,
+    'error' =&gt; 'Error text'
+];
+$jsonBody = json_encode($requestBody);
+$checkSum = createBodyChecksum($jsonBody);
+$apiMethod = sprintf('/v2/origin/custom/%s/%s/delivery_status', $scopeId, $messageId);
+
+// Составим подпись
+$signature = createSignature(
+    $channelSecret,
+    $checkSum,
+    $apiMethod
+);
+
+// Подготовим заголовки
+$curlHeaders = prepareHeaderForCurl($checkSum, $signature);
+
+echo 'POST ' . $apiMethod . PHP_EOL;
+foreach ($curlHeaders as $header) {
+    echo $header . PHP_EOL;
+}
+echo PHP_EOL . $jsonBody . PHP_EOL . PHP_EOL;
+
+// Выполним запрос
+execCurl($apiMethod, $jsonBody, $curlHeaders);</code></pre>
+</div>
+<h4 id="Запрос">Запрос</h4>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST https://amojo.amocrm.ru/v2/origin/custom/344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81/079e44fb-fc22-476b-9e8a-421b688ec53b/delivery_status
+Date: Thu, 16 Dec 2021 12:58:40 +0000
+Content-Type: application/json
+Content-MD5: a0bbbac729c6341f0a521e2db7a8a236
+X-Signature: ca51f810785031385a801f41103244713c1a2352
+User-Agent: amoCRM-Chats-Doc-Example/1.0</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "msgid": "079e44fb-fc22-476b-9e8a-421b688ec53b",
+  "delivery_status": 2,
+  "error_code": 905,
+  "error": "Error text"
+}</code></pre>
+</div>
+<h4 id="Ответ">Ответ</h4>
+<p>Метод не возвращает ответа</p>
+<h3 id="Отключение-канала-от-аккаунта">Отключение канала от аккаунта</h3>
+<p>В случае отключения интеграции, необходимо выполнить отключение канала от аккаунта.<br />
+Для этого необходимо воспользоваться <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Отключение-канала-чата-в-аккаунте">методом отключение канала</a>.</p>
+<p>Рассмотрим пример кода:</p>
+<div class="content-block__text_code">
+<pre><code class="language-php">&lt;?php
+
+include __DIR__ . '/helpers.php';
+
+// Секретный ключ канала
+$channelSecret = 'f2d7f8704eff95087ed45b23ba99c0b5aac8278e';
+// ID канала в сервисе чатов, который подключаем к каналу
+$channelId = '344a5002-f8ca-454d-af3d-396180102ac7';
+// Тело запроса
+$requestBody = [
+    'account_id' =&gt; '52e591f7-c98f-4255-8495-827210138c81',
+];
+$jsonBody = json_encode($requestBody);
+$checkSum = createBodyChecksum($jsonBody);
+$apiMethod = sprintf('/v2/origin/custom/%s/disconnect', $channelId);
+
+// Составим подпись
+$signature = createSignature(
+    $channelSecret,
+    $checkSum,
+    $apiMethod,
+    'DELETE'
+);
+
+// Подготовим заголовки
+$curlHeaders = prepareHeaderForCurl($checkSum, $signature);
+
+echo 'DELETE ' . $apiMethod . PHP_EOL;
+foreach ($curlHeaders as $header) {
+    echo $header . PHP_EOL;
+}
+echo PHP_EOL . $jsonBody . PHP_EOL . PHP_EOL;
+
+// Выполним запрос
+execCurl($apiMethod, $jsonBody, $curlHeaders, 'DELETE');</code></pre>
+</div>
+<h4 id="Запрос">Запрос</h4>
+<div class="content-block__text_code">
+<pre><code class="language-http">DELETE https://amojo.amocrm.ru/v2/origin/custom/344a5002-f8ca-454d-af3d-396180102ac7/disconnect
+Date: Wed, 15 Dec 2021 23:59:28 +0000
+Content-Type: application/json
+Content-MD5: 271fa2e4fb0ff84a3ef9689027bd1f38
+X-Signature: e1678e3b6aa674b5127f4feb448e6200ce0bfc72
+User-Agent: amoCRM-Chats-Doc-Example/1.0</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "account_id": "52e591f7-c98f-4255-8495-827210138c81"
+}</code></pre>
+</div>
+<h4 id="Ответ">Ответ</h4>
+<p>Метод не возвращает тело ответа</p>
+<h3 id="Разработка-тиражируемого-решения">Разработка тиражируемого решения</h3>
+<p>Вы можете предоставить другим пользователям amoCRM возможность подключить ваш канал к своему аккаунту.<br />
+Для этого необходимо разработать виджет, с помощью которого пользователь сможет связать свой аккаунт с вашим каналом.</p>
+<p>Подробнее о разработке виджета вы можете прочитать в <a href="https://www.amocrm.ru/developers/content/integrations/intro">документации по виджетам</a>.</p>
+<h4 id="Дополнительные-требования-к-виджету-для-корректной-работы-с-API-чатов">Дополнительные требования к виджету для корректной работы с API чатов</h4>
+<p>В manifest.json, в объект locations вам требуется добавить параметр “lead_sources”.<br />
+После этого ваш виджет отобразится в разделе подключения источников.</p>
+<p>Для отображения в модальном окне подключения интеграций с WhatsApp, необходимо также добавить в объект locations параметр “whatsapp_modal”.</p>
+<p><img src="https://www.amocrm.ru/uploads/2021/09/sources.png" alt="Модальное окно подключения источников" /></p>
+<p>После открытия окна подключения источников, пользователь открывает виджет и устанавливает его.<br />
+Затем производит настройку, например вводит логин и пароль,<br />
+JS часть виджета отправляет на ваш сервер связку логин/пароль и ID аккаунта.<br />
+ID аккаунта может быть получен виджетом через следующий JS скрипт: APP.constant(&quot;account&quot;).amojo_id<br />
+Ваш сервер проверяет учетные данные и вызывает запрос на подключение нового аккаунта к каналу чатов.<br />
+После установки виджета в Digital Pipeline будет создан источник.</p>
+<p>Так как виджет может быть установлен и из маркетплейса, в такое случае мы создадим источник автоматически.</p>
+<p><strong>Если в интеграции устновлена галка &quot;Множественные источники&quot;, источник по-умолчанию создан не будет.<br />
+Если интеграция указывает эту галку, мы считаем, что интеграция сама управляет своими источниками.</strong></p>
+<h4 id="Пример-виджета">Пример виджета</h4>
+<p><a href="https://www.amocrm.ru/uploads/2021/09/demo_chat.zip">Скачать пример виджета</a></p>
+<h3 id="Поддержка-и-создание-множественных-источников">Поддержка и создание множественных источников</h3>
+<p>По-умолчанию, мы считаем, что канал представляет собой подключение одного типа чата (WhatsApp, Viber, Facebook, Онлайн-чат на cайт и другие)<br />
+и позволяет возможность передавать сообщения между amoCRM и конечной чат-платформой через интеграцию.</p>
+<p>Так как бизнес имеет необходимость разделять общение со своими клиентами по нескольким направлениям<br />
+(это может быть несколько телефонных номеров WhatsApp для разных отделов или разные страницы лендингов с онлайн-чатами),<br />
+то и канал общения тоже требуется разделять. Для разделения в рамках одного типа чатов используются <em>источники</em>.</p>
+<p>Таким образом с помощью источника можно определить, что клиент обратился к бизнесу с определенного лендинга или написал сообщение на телефонный номер конкретного отдела компании.<br />
+И в дальнейшем уже выстроить работу с каждым источником индивидуально: распределение по воронкам и работа ботов в зависимости от источника.</p>
+<p>В большинстве случаев, интеграция предоставляет связь между amoCRM и одной конкретной чат-платформой.<br />
+Таким образом интеграции необходим всего лишь один канал для обеспечения передачи сообщений между аккаунтом amoCRM и чат-платформой.</p>
+<p>Если источник требуется только 1, то amoCRM создает источник при установке интеграции.<br />
+Если же интеграции требуется несколько источников, это следует учесть при разработке интеграции.</p>
+<p>Для реализации поддержки множественных источников интеграции необходимо создать источники через <a href="https://www.amocrm.ru/developers/content/crm_platform/sources-api">API</a>.<br />
+При создании источника, в external_id необходимо указать идентификатор источника на стороне интеграции.<br />
+Заданный external_id вы сможете передавать при создании чата или добавлении сообщений, чтобы они были явно связанны с конкретным источником.<br />
+Также external_id будет приходить в хуках сообщений, которые были написаны в конкретный канал.</p>
+<p>Для того чтобы интеграция поддерживала множественные источники, необходимо, чтобы у интеграции был загружен архив, а в locations в manifest.json присутствовало значение &quot;lead_sources&quot;.</p>
+<p>Если интеграции не требуется автоматическое создание источника, то в настройках интеграции необходимо установить гавлку &quot;Множественные источники&quot;.</p>
+<h4 id="Источник-по-умолчанию">Источник по-умолчанию</h4>
+<p>Источник &quot;по-умолчанию&quot; позволяет интеграции указать amoCRM, как работать с чатами, у которых не указан источник или передан незарегистрированный источник.<br />
+Т.е. он позволяет массово разметить уже существующие чаты при внедрении интеграцией множественных источников.</p>
+<p>Источников &quot;по-умолчанию&quot; (с полем <code class="code_text">default=true</code>) может быть не более одного на аккаунт для одной интеграции.</p>
+<p>Если интеграция не поддерживает работу с множественными источниками, то у нее будет всего 1 источник, который создает amoCRM при добавлении интеграции в качестве источника в Digital Pipeline или установке интеграции.<br />
+У таких источников в поле <code class="code_text">external_id</code> прописан код виджета. Интеграция может его удалить или назначить другой источник &quot;по-молчанию&quot; через API.</p>
+<p>В случае, когда интеграция поддерживает работу с множественными источниками, то amoCRM не будет создавать источник &quot;по-умолчанию&quot; самостоятельно при добавлении интеграции администратором в качестве источника.<br />
+И все необходимые источники, интеграция создает уже самостоятельно.<br />
+Для этого надо указать соответствующий флаг в настройках интеграции перед передачей на модерацию виджета интеграции.</p>
+<p>Что бы сменить источник по-умолчанию, необходимо через API проставить поле <code class="code_text">default=true</code> у источника. У предыдущего источника (если он был) поле default будет выставлено в <code class="code_text">default=false</code>.</p>
+<p>Так как источник &quot;по-умолчанию&quot; не обязателен, то при его удалении ни один другой источник не станет &quot;по-умолчанию&quot; автоматически. Интеграция должна указать новый источник по-умолчанию самостоятельно.</p>
+<p><strong>Важный момент</strong><br />
+Источник по-умолчанию не привязывается к чатам, если его явно не передавали с сообщениями.</p>
+<p>К примеру:<br />
+Есть сделка с контактом и чатом, чат не привязан к источнику.  </p>
+<p>И существуют 2 источника:</p>
+<ul>
+<li>Отдел технической поддержки</li>
+<li>Отдел продаж</li>
+</ul>
+<p>Мы назначаем &quot;Отдел технической поддержки&quot; источником по-умолчанию.<br />
+Теперь при отправке пользователем сообщения в чат интеграции придет источник &quot;Отдел технической поддержки&quot;</p>
+<p>Если назначить источником по-умолчанию &quot;Отдел продаж&quot;, то в последующих отправленных из amoCRM сообщениях, external_id в хуке будет равен &quot;Отдел продаж&quot;</p>
+<p>Такое поведение будет сохраняться до момента передачи интеграцией источника вместе с сообщением.<br />
+Как только интеграция сообщит, что чат относится к конкретному источнику логика источника по-умолчанию перестанет действовать для чата.<br />
+<strong>Вернуть размеченный чат обратно к логике по-умолчанию уже нельзя.</strong></p>
+<h4 id="Особенности-работы-интеграции-с-несколькими-каналами-чатов">Особенности работы интеграции с несколькими каналами чатов</h4>
+<p><em>Данные предостережения стоит рассматривать только в случае, если за интеграцией закреплено более 1 канала и интеграция использует возможность &quot;Написать первым&quot;</em></p>
+<p>Каждая интеграция может управлять только своими источниками, и среди источников интеграции может быть только один источник &quot;по-умолчанию&quot;.</p>
+<p>Данный момент накладывает дополнительные ограничения на интеграцию при управлении источниками:</p>
+<ul>
+<li>интеграции требуется самостоятельно разрешать конфликты идентификаторов источников на своей стороне</li>
+<li>источник по-умолчанию может использоваться только с одним каналом. Нужно дополнительно прорабатывать процесс миграции на множественные источники</li>
+<li>для каждого чата/сообщения необходимо явно надо передавать источник, что бы все чаты имели явную привязку к источнику</li>
+<li>если будет передан неизвестный для amoCRM источник, то в качестве источника будет указана сама интеграция (тот же источник, что используется при создании сделки через API)</li>
+</ul>
+<p>В данной ситуации, одним из решений может быть предоставление выбора источника &quot;по-умолчанию&quot; пользователю в настройках интеграции.<br />
+Что бы пользователь понимал, что для чатов без явного указания источника будет использоваться конкретный канал и выбранный источник.</p>
+<h4 id="Логика-выбора-источника-при-создании-чата">Логика выбора источника при создании чата</h4>
+<p>Если интеграция не создавала источников самостоятельно,<br />
+то при создании неразобранной сделки из чата, в сделке будет указан созданный нами (при подключении интеграции) источник с названием интеграции.<br />
+Если интеграция передает в сообщениях несуществующий или удаленный источник, тогда мы проверим, есть ли источник по-умолчанию (свойство источника <code class="code_text">default=true</code>).<br />
+Если источника по-умолчанию нет &#8211; тогда в сделках будет указан источник с названием интеграции (как при создании неразобранного через API неразобранного).</p>
+<h4 id="Указание-источника-при-работе-с-API-чатов">Указание источника при работе с API чатов</h4>
+<p>Интеграция может указать в <a href="https://www.amocrm.ru/developers/content/crm_platform/sources-api">источнике</a> воронку, где будет создано неразобранное при первом входящем сообщении.<br />
+Для этого необходимо чтобы внешний идентификатор источника <code class="code_text">source[external_id]</code>,<br />
+передаваемый в <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Отправка-или-импорт-сообщения">сообщениях</a><br />
+(или при <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Создание-нового-чата">создании чата</a>) совпадал с external_id существующего источника.<br />
+В случае когда пользователь начинает переписку с клиентом первым и при этом пользователь выбрал созданный интеграцией источник, то выбранный источник передается интеграции в <a href="https://www.amocrm.ru/developers/content/chats/chat-webhooks#Хук-сообщения-v2">хуке</a>.<br />
+Таким образом интеграция может понять в рамках какого источника была начата переписка, и, к примеру, для WhatsApp интеграций,<br />
+отправить клиенту сообщения с конкретного подключенного номера телефона, если администратор подключил несколько номеров.</p>
+<h4 id="Внедрение-множественных-источников-в-действующие-интеграции">Внедрение множественных источников в действующие интеграции</h4>
+<p>Источник по-умолчанию может быть использован интеграцией при переходе на множественные источники, особенно если<br />
+интеграция поддерживает функционал &quot;Написать первым&quot;.</p>
+<p>К примеру, имеем исходное состояние:<br />
+Есть аккаунт с подключенной интеграцией с чатами, и эта интеграция поддерживает только 1 источник.<br />
+На данный момент нам не важно как была установлена интеграция: через Digital Pipeline или маркетплейс.</p>
+<p>Интеграция начинает внедрение поддержки множественных источников, этот процесс логически разобьем на этапы:</p>
+<p><strong>1 этап</strong><br />
+Интеграция умеет работать с API источниками (но не отправляет и не принимает источник в сообщениях amoJo).<br />
+На данном этапе интеграция добавляет источник по-умолчанию в аккаунт.<br />
+Данный источник по-умолчанию соответствует источнику, который использовался, когда не было поддержки нескольких источников.<br />
+Теперь в хуках о сообщениях будет приходить <code class="code_text">external_id</code> этого источника для всех чатов, которые явно не закреплены за конкретным источником.</p>
+<p><strong>2 этап</strong><br />
+Интеграция уже умеет работать с источниками и при отправке сообщений от клиента (при создании чата) указывает external_id.<br />
+Все чаты с новыми сообщениями становятся размеченными по переданному в сообщении источнику.</p>
+<p>Так же интеграция теперь обрабатывает источник и учитывает его при отправке сообщения от менеджера, в том числе при начале чата с клиентом (функционал &quot;Написать первым&quot;).</p>
+<p><strong>3 этап</strong><br />
+Интеграция позволяет администратору аккаунта добавить (через интеграцию) второй и последующие источники.<br />
+Вся переписка по чатам закрепляется за каким-то явно указанным интеграцией источником, все неразмеченные чаты все еще числятся за источником по-умолчанию.</p>
+<h4 id="Пример-цепочки-запросов">Пример цепочки запросов</h4>
+<p>После установки интеграции и <a href="https://www.amocrm.ru/developers/content/oauth/step-by-step">получения Access Token</a>, интеграция сможет создавать необходимые источники через API.<br />
+Рассмотрим цепочку вызовов:</p>
+<ul>
+<li>Создание источника</li>
+<li>Отправка сообщения с передачей информации об источнике</li>
+<li>Вебхук с информацией об источнике</li>
+</ul>
+<p>Представим, что мы разрабатываем интеграцию с WhatsApp с поддержкой нескольких номеров.<br />
+Для начала, создадим пару источников для отдела Продаж (+79039876543) и Технической поддержки (+79001234567).<br />
+Для идентификации источников возьмем номера телефонов которые, поддерживает наша интеграция: 79039876543 и 79001234567 соответственно.<br />
+Телефон технической поддержки будем считать, что пользователь выбрал как источник по умолчанию.<br />
+Также добавим номер отдела продаж &#8211; как возможный номер для кнопки на сайт.</p>
+<p>Для этого отправим запрос на <code class="code_text">POST /api/v4/sources</code></p>
+<h5 id="Запрос">Запрос</h5>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST /api/v4/sources HTTP/1.1
+Host: https://example.amocrm.ru
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbG....</code></pre>
+</div>
+<h5 id="Тело-запроса">Тело запроса</h5>
+<div class="content-block__text_code">
+<pre><code class="language-json">[
+  {
+    "name": "Support",
+    "external_id": "79001234567",
+    "services": [],
+    "default": true
+  },
+  {
+    "name": "Sales",
+    "external_id": "79039876543",
+    "services": [
+      {
+        "type": "whatsapp",
+        "pages": [
+          {
+            "id": "79039876543",
+            "name": "whatsapp",
+            "link": "+79039876543"
+          }
+        ]
+      }
+    ],
+    "default": false
+  }
+]</code></pre>
+</div>
+<h5 id="Ответ">Ответ</h5>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "_total_items": 2,
+  "_embedded": {
+    "sources": [
+      {
+        "id": 3108069,
+        "name": "Support",
+        "pipeline_id": 20453,
+        "external_id": "79001234567",
+        "services": [],
+        "default": true,
+        "request_id": "0",
+        "_links": {
+          "self": {
+            "href": "https://example.amocrm.ru/api/v4/sources/3108069"
+          }
+        }
+      },
+      {
+        "id": 3108070,
+        "name": "Sales",
+        "pipeline_id": 20453,
+        "external_id": "79039876543",
+        "services": [
+          {
+            "type": "whatsapp",
+            "pages": [
+              {
+                "id": "79039876543",
+                "name": "whatsapp",
+                "link": "+79039876543"
+              }
+            ]
+          }
+        ],
+        "default": false,
+        "request_id": "1",
+        "_links": {
+          "self": {
+            "href": "https://example.amocrm.ru/api/v4/sources/3108070"
+          }
+        }
+      }
+    ]
+  }
+}</code></pre>
+</div>
+<p>Интеграции необходимо хранить связь external_id и например, номера телефона, на своей стороне.</p>
+<p>Теперь мы можем отправлять сообщение в API Чатов с указанием источника, и неразобранное будет создано в воронке, в которой подключен переданный источник.</p>
+<p>В данном случае клиент отправил сообщение на номер Отдела продаж и интеграция указала <code class="code_text">external_id</code> источника в поле <code class="code_text">source[external_id]</code> при отправке сообщения.</p>
+<h5 id="Запрос">Запрос</h5>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST https://amojo.amocrm.ru/v2/origin/custom/344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81
+Date: Fri, 17 Dec 2021 10:59:28 +0000
+Content-Type: application/json
+Content-MD5: 353178c993f09a8ec5f3eab4093b753e
+X-Signature: e895539b52051e1a8d3f89d454c7ad7406705234
+User-Agent: amoCRM-Chats-Doc-Example/1.0</code></pre>
+</div>
+<h5 id="Тело-запроса">Тело запроса</h5>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "event_type": "new_message",
+  "payload": {
+    "timestamp": 1639738768,
+    "msec_timestamp": 1639738768457,
+    "msgid": "my_int-5f2836a8ca481",
+    "conversation_id": "my_int-d5a421f7f218",
+    "sender": {
+      "id": "my_int-1376265f-86df-4c49-a0c3-a4816df41af8",
+      "avatar": "https://images.pexels.com/photos/10050979/pexels-photo-10050979.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+      "profile": {
+        "phone": "+79151112233",
+        "email": "example.client@example.com"
+      },
+      "profile_link": "https://example.com/profile/example.client",
+      "name": "Вася клиент"
+    },
+    "message": {
+      "type": "text",
+      "text": "Сообщение от клиента"
+    },
+    "source": {
+      "external_id": "79039876543"
+    },
+    "silent": false
+  }
+}</code></pre>
+</div>
+<h5 id="Ответ">Ответ</h5>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "new_message": {
+    "msgid": "7779c89e-bb5b-4da0-b802-5de2ab7d4114",
+    "ref_id": "my_int-5f2836a8ca481"
+  }
+}</code></pre>
+</div>
+<p>После сообщения менеджера клиенту интеграция получит хук, также с указанием источника в поле <code class="code_text">source[external_id]</code></p>
+<p>По источнику, интеграция должна найти нужный ей мессенджер на своей стороне и отправить ответ клиенту в нужный мессенджер, например, с номера отдела продаж.</p>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "account_id": "52e591f7-c98f-4255-8495-827210138c81",
+  "time": 1639572261,
+  "message": {
+    "receiver": {
+      "id": "2ed64e26-70a1-4857-8382-bb066a076219",
+      "phone": "+79151112233",
+      "email": "example.client@example.com",
+      "client_id":"my_int-1376265f-86df-4c49-a0c3-a4816df41af8"
+    },
+    "sender": {
+      "id": "76fc2bea-902f-425c-9a3d-dcdac4766090"
+    },
+    "conversation": {
+      "id": "8e4d4baa-9e6c-4a88-838a-5f62be227bdc",
+      "client_id":"my_int-d5a421f7f218"
+    },
+    "source":{
+      "external_id": "79039876543"
+    },
+    "timestamp": 1639572260,
+    "msec_timestamp": 1639572260980,
+    "message": {
+      "id": "0371a0ff-b78a-4c7b-8538-a7d547e10692",
+      "type": "text",
+      "text": "Текст сообщения Сделка #15926745",
+      "tag": "",
+      "media": "",
+      "thumbnail": "",
+      "file_name": "",
+      "file_size": 0
+    }
+  }
+}</code></pre>
+</div>
+<h3 id="Связывание-нового-чата-с-существующим-контактом">Связывание нового чата с существующим контактом</h3>
+<p>API Чатов вместе с API amoCRM позволяет создать новый контакт, чат и импортировать туда переписку.<br />
+API Чатов предоставляет отдельный метод создания чата, при вызове которого не будет создан новый контакт или сделка.<br />
+API amoCRM позволяет связать существующий чат с контактом по ID контакта.</p>
+<p>С точки зрения бизнес логики, данный пример будет, когда клиент уже существующий и нам не нужно создание неразобранного.<br />
+Контакт в примере создадим для наглядности процесса.</p>
+<p>Подробнее о методе создания чата можно прочитать в разделе <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Создание-нового-чата">API Reference</a>.</p>
+<p>Для начала создадим новый чат:</p>
+<div class="content-block__text_code">
+<pre><code class="language-php">&lt;?php
+
+include __DIR__ . '/helpers.php';
+
+// Секретный ключ канала
+$channelSecret = 'f2d7f8704eff95087ed45b23ba99c0b5aac8278e';
+// Scope ID, который был получен при подключении канала в аккаунт
+$scopeId = '344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81';
+// Тело запроса
+$requestBody = [
+    'conversation_id' =&gt; 'my_int-8e3e7640-49af-4448-a2c6-d5a421f7f217',
+    'source' =&gt; [
+        'external_id' =&gt; '78001234567', // external_id источника в API Источников, поле не передается, если интеграция не поддерживает множественные источники
+    ],
+    'user' =&gt; [
+        'id' =&gt; 'my_int-1376265f-86df-4c49-a0c3-a4816df41af9',
+        'avatar' =&gt; 'https://example.com/users/avatar.png',
+        'name' =&gt; 'Имя клиента',
+        'profile' =&gt; [
+            'phone' =&gt; '+79151112233',
+            'email' =&gt; 'example.client@example.com',
+        ],
+        'profile_link' =&gt; 'https://example.com/profile/example.client',
+    ]
+];
+$jsonBody = json_encode($requestBody);
+$checkSum = createBodyChecksum($jsonBody);
+$apiMethod = sprintf('/v2/origin/custom/%s/chats', $scopeId);
+
+// Составим подпись
+$signature = createSignature(
+    $channelSecret,
+    $checkSum,
+    $apiMethod
+);
+
+// Подготовим заголовки
+$curlHeaders = prepareHeaderForCurl($checkSum, $signature);
+
+echo 'POST ' . $apiMethod . PHP_EOL;
+foreach ($curlHeaders as $header) {
+    echo $header . PHP_EOL;
+}
+echo PHP_EOL . $jsonBody . PHP_EOL . PHP_EOL;
+
+// Выполним запрос
+execCurl($apiMethod, $jsonBody, $curlHeaders);
+</code></pre>
+</div>
+<h4 id="Запрос">Запрос</h4>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST https://amojo.amocrm.ru/v2/origin/custom/344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81/chats
+Date: Thu, 16 Dec 2021 23:22:49 +0000
+Content-Type: application/json
+Content-MD5: 5139e573382c0eae38f476822abb2014
+X-Signature: a601e486d694c8e7e8a5b637660f949f8bb7efaf
+User-Agent: amoCRM-Chats-Doc-Example/1.0</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "conversation_id": "my_int-8e3e7640-49af-4448-a2c6-d5a421f7f217",
+  "source": {
+    "external_id": "78001234567"
+  },
+  "user": {
+    "id": "my_int-1376265f-86df-4c49-a0c3-a4816df41af9",
+    "avatar": "https://example.com/users/avatar.png",
+    "name": "Имя клиента",
+    "profile": {
+      "phone": "+79151112233",
+      "email": "example.client@example.com"
+    },
+    "profile_link": "https://example.com/profile/example.client"
+  }
+}</code></pre>
+</div>
+<h4 id="Ответ">Ответ</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "id": "31d43a78-e09d-46ae-8994-7e93560169b8",
+  "user": {
+    "id": "7c7330cd-c0ee-45a5-bd62-643a3a8225e8",
+    "client_id": "my_int-1376265f-86df-4c49-a0c3-a4816df41af9",
+    "name": "Имя клиента",
+    "profile": {
+      "phone": "79151112233",
+      "email": "example.client@example.com"
+    },
+    "avatar": "https://example.com/users/avatar.png"
+  }
+}</code></pre>
+</div>
+<p>После создания чата, в качестве примера, создадим контакт. Также вы можете использовать уже существующий контакт.</p>
+<h4 id="Пример-запроса">Пример запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST /api/v4/contacts HTTP/1.1
+Host: https://{subdomain}.amocrm.ru
+Content-Type: application/json
+Authorization: Bearer xxxx</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">[
+  {
+    "first_name": "Jack200803",
+    "last_name": "Tester"
+  }
+]</code></pre>
+</div>
+<h4 id="Ответ">Ответ</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">    {
+        "_links": {
+            "self": {
+                "href": "https://{subdomain}.amocrm.ru/api/v4/contacts"
+            }
+        },
+        "_embedded": {
+            "contacts": [
+                {
+                    "id": 3102959,
+                    "request_id": "0",
+                    "_links": {
+                        "self": {
+                            "href": "https://{subdomain}.amocrm.ru/api/v4/contacts/3102959"
+                        }
+                    }
+                }
+            ]
+        }
+    }</code></pre>
+</div>
+<p>После создания контакта, теперь свяжем контакт и созданный чат.</p>
+<h4 id="Пример-запроса">Пример запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST /api/v4/contacts/chats HTTP/1.1
+Host: https://{subdomain}.amocrm.ru
+Content-Type: application/json
+Authorization: Bearer xxxx</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">[
+  {
+    "contact_id": 3102959,
+    "chat_id": "6cbab3d5-c4c1-46ff-b710-ad59ad10805f"
+  }
+]</code></pre>
+</div>
+<h4 id="Ответ">Ответ</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">    {
+        "_total_items": 1,
+        "_embedded": {
+            "chats": [
+                {
+                    "chat_id": "6cbab3d5-c4c1-46ff-b710-ad59ad10805f",
+                    "contact_id": 3102959,
+                    "id": 26219,
+                    "request_id": "0"
+                }
+            ]
+        }
+    }</code></pre>
+</div>
+<p>Также можно проверить привязку чата и контакта. Для этого можно воспользоваться <a href="https://amocrm.ru/developers/content/api/contacts#contacts-chat-list">методом API</a>.</p>
+<h3 id="Импорт-существующей-переписки">Импорт существующей переписки</h3>
+<p>Метод <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Отправка-или-импорт-сообщения">добавления сообщений</a><br />
+позволяет, кроме добавления новых сообщение от клиента, производить импорт существующих сообщений.</p>
+<p>Импортируемые сообщения могут быть адресованы:</p>
+<ul>
+<li>Входящее от клиента</li>
+<li>Исходящее клиенту от пользователя amoCRM</li>
+<li>Исходящее клиенту от бота интеграции</li>
+</ul>
+<p>Метод позволяем импортировать сообщения в чат, не вызывая уведомлений для пользователей amoCRM и создания неразобранного.<br />
+Для этого необходимо передать в метод API поле <code class="code_text">payload[silent]: true</code>.<br />
+При массовом импорте старых сообщений в чат, рекомендуем передавать <code class="code_text">payload[silent]: true</code> со всеми сообщениями, кроме последнего.<br />
+В последнем сообщении (самом свежем) передаем поле <code class="code_text">payload[silent]: false</code>,<br />
+таким образом на последнее сообщение будет создано неразобранное и придет только одно уведомление, тем самым мы не создадим клиенту лишних беспокойств.</p>
+<p>Также стоит отметить, что история сообщений в карточке отображается только за 24 часа до даты создания сделки/покупателя.</p>
+<p>Подробную спецификацию и примеры можно найти в <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Отправка-или-импорт-сообщения">API Reference</a>.</p>
+<h3 id="Написать-первым">Написать первым</h3>
+<p>Еще одна возможность, которую предоставляет API Чатов &#8211; функция Написать первым.<br />
+Для получения доступа к функционалу, при создании чата, в заявке необходимо указать, что вам требуется эта функция.<br />
+Для существующих каналов её также можно включить через поддержку.</p>
+<p>После включения функции &quot;Написать первым&quot;, пользователи получают возможность создавать новый чат на стороне amoCRM в карточке сделки или через Salesbot.</p>
+<p>Уникальным идентификатором для функционала является номер телефона. При создании чата, amoCRM пришлет интеграции вебхук v2.</p>
+<p>Отличительной особенностью данного хука является отсутствие поля message[conversation][client_id],<br />
+в котором в обычных хуках приходит ID чата на стороне интеграции.</p>
+<p>Если ваша интеграция поддерживает множественные источники, в хуке вы получите поле message[source][external_id],<br />
+в котором будет находиться переданный external_id при создании источника.</p>
+<p>Также стоит отметить, что при добавлении нового сообщения через метод <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Отправка-или-импорт-сообщения">отправки сообщений</a>,<br />
+вам необходимо передать payload[conversation_id] c ID чата на стороне интеграции, а также<br />
+payload[conversation_ref_id] с ID чата на стороне API чатов. Передача этих двух параметров позволит связать чат на стороне amoCRM с идентификатором чата на стороне интеграции.<br />
+Для связывания пользователя, которому мы пишем, с ближайшим входящим сообщением необходимо передать<br />
+поле payload[sender][ref_id] с ID пользователя на стороне API Чатов и payload[sender][id] c ID пользователя на стороне интеграции.</p>
+<h3 id="Отображение-статуса-печатания-в-карточке-сделки">Отображение статуса печатания в карточке сделки</h3>
+<p>Некоторые мессенджеры уведомляют интеграции о том, что пользователь сейчас печатает. Интеграция может уведомить об этом amoCRM.<br />
+В таком случае в карточке, в которой отображается чат, появится анимация печати от имени пользователя мессенджера (клиента).</p>
+<p><img src="https://www.amocrm.ru/uploads/2021/09/typing_vasiliy.png" /></p>
+<p>Важно отметить, что в запросе передается ID чата на стороне интеграции (ID переданный при отправке сообщения в payload[conversation_id]).<br />
+Также передается ID пользователя на стороне интеграции, который печатает.</p>
+<p>Рассмотрим пример кода:</p>
+<div class="content-block__text_code">
+<pre><code class="language-php">&lt;?php
+
+include __DIR__ . '/helpers.php';
+
+// Секретный ключ канала
+$channelSecret = 'f2d7f8704eff95087ed45b23ba99c0b5aac8278e';
+// Scope ID, который был получен при подключении канала в аккаунт
+$scopeId = '344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81';
+// Тело запроса, отправим информацию, что пользователь печатает
+$requestBody = [
+    'conversation_id' =&gt; 'my_int-d5a421f7f218',
+    'sender' =&gt; [
+        'id' =&gt; 'my_int-1376265f-86df-4c49-a0c3-a4816df41af8',
+    ],
+];
+$jsonBody = json_encode($requestBody);
+$checkSum = createBodyChecksum($jsonBody);
+$apiMethod = sprintf('/v2/origin/custom/%s/typing', $scopeId);
+
+// Составим подпись
+$signature = createSignature(
+    $channelSecret,
+    $checkSum,
+    $apiMethod
+);
+
+// Подготовим заголовки
+$curlHeaders = prepareHeaderForCurl($checkSum, $signature);
+
+echo 'POST ' . $apiMethod . PHP_EOL;
+foreach ($curlHeaders as $header) {
+    echo $header . PHP_EOL;
+}
+echo PHP_EOL . $jsonBody . PHP_EOL . PHP_EOL;
+
+// Выполним запрос
+execCurl($apiMethod, $jsonBody, $curlHeaders);
+</code></pre>
+</div>
+<h4 id="Запрос">Запрос</h4>
+<div class="content-block__text_code">
+<pre><code class="language-http">POST https://amojo.amocrm.ru/v2/origin/custom/344a5002-f8ca-454d-af3d-396180102ac7_52e591f7-c98f-4255-8495-827210138c81/typing
+Date: Thu, 16 Dec 2021 16:01:21 +0000
+Content-Type: application/json
+Content-MD5: 255a22566d68be207fa36804e78a523a
+X-Signature: e8263b1daf2b20396c02db6c8c846f95cc0f9540
+User-Agent: amoCRM-Chats-Doc-Example/1.0</code></pre>
+</div>
+<h4 id="Тело-запроса">Тело запроса</h4>
+<div class="content-block__text_code">
+<pre><code class="language-json">{
+  "conversation_id": "my_int-d5a421f7f218",
+  "sender": {
+    "id": "my_int-1376265f-86df-4c49-a0c3-a4816df41af8"
+  }
+}</code></pre>
+</div>
+<h3 id="Хуки-о-печати-пользователем-amoCRM">Хуки о печати пользователем amoCRM</h3>
+<p>Мы предоставляем дополнительную возможность для интеграций &#8211; получать вебхуки, когда пользователь amoCRM начинает печатать сообщение.<br />
+Для получения подобных хуков вам необходимо обратиться в техническую поддержку или указать это при регистрации нового канала.</p>
+<p>Запрос придет на тот же адрес, который был указан как адрес для получения Webhooks.</p>
+<p>Мы считаем, что после каждого нажатия на клавишу, пользователь печатает еще до 5 секунд, поэтому в хуке мы присылаем timestamp-метку, показывающую, когда пользователь перестал печатать.<br />
+Вебхук отправляется не чаще, чем раз в 5 секунд.</p>
+<p>После получения подобного хука, вам необходимо передать эту информацию в мессенджер, с которым вы интегрируетесь,<br />
+чтобы в мессенджере отобразилась информация о том, что мы сейчас печатаем.</p>
+<p><a href="https://www.amocrm.ru/developers/content/chats/chat-webhooks#Хук-о-печати">Описание формата Webhook&#8217;ов о печати (Webhook Reference)</a></p>
+<h3 id="Получение-истории-сообщений-чата">Получение истории сообщений чата</h3>
+<p>С помощью API чатов вы можете получить историю сообщений конкретного чата.<br />
+Для получения истории вам потребуется scope_id и ID чата на стороне API Чатов,<br />
+который можно получить в хуке о входящем сообщении или при <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference##Создание-нового-чата">создании чата через API</a>.</p>
+<p>Подробный пример доступен в <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Получение-истории-сообщений-по-чату">cпецификации метода получения истории</a>.</p>
+<h3 id="Поддержка-реакций">Поддержка реакций</h3>
+<p>С помощью API чатов вы можете послать реакцию на сообщения или снять реакцию с сообщения <a href="https://www.amocrm.ru/developers/content/chats/chat-api-reference#Отправка-или-снятие-реакции">спецификация метода посылки реакции</a>.</p>
+<p>Если интеграция сообщила список поддерживаемых реакций, то менеджеры так же смогут реагировать<br />
+на сообщения из карточки. При этом в интеграцию будет приходить хук <a href="https://www.amocrm.ru/developers/content/chats/chat-webhooks#Хук-о-реакции">Описание формата Webhook&#8217;ов о реакции (Webhook Reference)</a>.</p>
+
+    </div>
+  </div>
+</div>                              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+      <footer class="page_footer">
+  <div class="page_footer__inner">
+    <section id="main-menu" class="main-menu">
+      <div class="main-menu__column main-menu__column-1 bellows">
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item bellows__header">
+            <i class="main-menu__icon_arrow icon-down-open-big"></i>Последние обновления</li>
+          <li class="main-menu__header_item">Последние обновления</li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item">
+                  <a href="/april2017/" class="main-menu__minor_link">Апрель 2017</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/october2017/" class="main-menu__minor_link">Октябрь 2017</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/april2018/" class="main-menu__minor_link">Апрель 2018</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/autumn2018/" class="main-menu__minor_link">Ноябрь 2018</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/march2019/" class="main-menu__minor_link">Март 2019</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/autumn2019/" class="main-menu__minor_link">Ноябрь 2019</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/spring2020/" class="main-menu__minor_link">Май 2020</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/december2020/" class="main-menu__minor_link">Декабрь 2020</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/avitowork/" class="main-menu__minor_link">Зима 2020: Авито.Работа</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/sber/" class="main-menu__minor_link">Весна 2021: СберБизнес Эквайринг</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/alpha/" class="main-menu__minor_link">Весна 2021: АльфаБизнес Эквайринг</a>
+                </li>
+                
+                <li class="main-menu__minor_item">
+                  <a href="/tinkoff/" class="main-menu__minor_link">Весна 2021: Тинькофф Эквайринг</a>
+                </li>
+                
+                <li class="main-menu__minor_item">
+                  <a href="/yametrika/" class="main-menu__minor_link">Весна 2021: Яндекс Метрика</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/april2021/" class="main-menu__minor_link">Апрель 2021</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/vkgoods/" class="main-menu__minor_link">Осень 2021: Магазин ВКонтакте</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/spring2022/" class="main-menu__minor_link">Весна 2022</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/amoai/" class="main-menu__minor_link">Лето 2024: amoAI</a>
+                </li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item bellows__header">
+            <i class="main-menu__icon_arrow icon-down-open-big"></i>Тур по продукту</li>
+          <li class="main-menu__header_item">Тур по продукту</li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#pipeline" class="main-menu__minor_link">Воронка продаж</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#website-integration" class="main-menu__minor_link">Интеграция с сайтом</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#mobile-app" class="main-menu__minor_link">Мобильное приложение</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#mail" class="main-menu__minor_link">Почта</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#voip" class="main-menu__minor_link">Интеграция с телефонией</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#chats" class="main-menu__minor_link">Коммуникации</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#digital-pipeline" class="main-menu__minor_link">Digital воронка</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#customers" class="main-menu__minor_link">Покупатели</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/tour/#widgets" class="main-menu__minor_link">Виджеты</a>
+                </li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="main-menu__column main-menu__column-2 bellows">
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item">
+            <a href="/developers/" class="main-menu__minor_link">Документация API</a>
+          </li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content"></li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item bellows__header">
+            <i class="main-menu__icon_arrow icon-down-open-big"></i>API и виджеты</li>
+          <li class="main-menu__header_item">API и виджеты</li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item">
+                  <a href="/extensions/?group=recommended" class="main-menu__minor_link">Рекомендуемые</a>
+                </li>
+                <li class="main-menu__minor_item">
+                  <a href="/extensions/?group=phone" class="main-menu__minor_link">Телефония</a>
+                </li>
+                <li class="main-menu__minor_item">
+                  <a href="/extensions/?group=site" class="main-menu__minor_link">Интеграция с сайтом</a>
+                </li>
+                <li class="main-menu__minor_item">
+                  <a href="/extensions/?group=mail" class="main-menu__minor_link">Email и SMS рассылки</a>
+                </li>
+                <li class="main-menu__minor_item">
+                  <a href="/extensions/?group=chats" class="main-menu__minor_link">Онлайн чаты</a>
+                </li>
+                <li class="main-menu__minor_item">
+                  <a href="/extensions/?group=useful" class="main-menu__minor_link">Полезные сервисы</a>
+                </li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item">
+            <a href="/customers/" class="main-menu__minor_link">Отзывы</a>
+          </li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content"></li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item bellows__header">
+            <i class="main-menu__icon_arrow icon-down-open-big"></i>Цены</li>
+          <li class="main-menu__header_item">Цены</li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item">
+                  <a href="/buy" class="main-menu__minor_link">Тарифы</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/buy/archive" class="main-menu__minor_link">Архив тарифов</a>
+                </li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="main-menu__column main-menu__column-3 bellows">
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item bellows__header">
+            <i class="main-menu__icon_arrow icon-down-open-big"></i>Блог о продажах</li>
+          <li class="main-menu__header_item">Блог о продажах</li>
+
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item">
+                  <a href="/blog/" class="main-menu__minor_link">Все</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/blog/32/" class="main-menu__minor_link">Исследования отделов продаж</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/blog/24/" class="main-menu__minor_link">Кейсы</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/blog/22/" class="main-menu__minor_link">Инструменты продаж</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/blog/28/" class="main-menu__minor_link">Sales-солянка</a>
+                </li>
+
+                <li class="main-menu__minor_item">
+                  <a href="/blog/328/" class="main-menu__minor_link">Энциклопедия amoCRM</a>
+                </li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item">
+            <a href="/cases/" class="main-menu__minor_link">Кейсы</a>
+          </li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content"></li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item bellows__header">
+            <i class="main-menu__icon_arrow icon-down-open-big"></i>Партнеры</li>
+          <li class="main-menu__header_item">Партнеры</li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content">
+              <ul>
+                <li class="main-menu__minor_item">
+                  <a href="/partners/?group=complex" class="main-menu__minor_link">Комплексное внедрение</a>
+                </li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item">
+            <a href="/contacts/" class="main-menu__minor_link">Контакты</a>
+          </li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content"></li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item">
+            <a href="/support/" class="main-menu__minor_link">Помощь</a>
+          </li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content"></li>
+          </div>
+        </ul>
+
+        <ul class="main-menu__header_list bellows__item">
+          <li class="main-menu__header_item">
+            <a href="/jobs/" class="main-menu__minor_link">Вакансии</a>
+          </li>
+          <div class="bellows__content-wrapper" aria-hidden="true">
+            <li class="main-menu__minor_list bellows__content"></li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="main-menu__column main-menu__column-4">
+        <ul class="main-menu__subcolumn main-menu__contacts">
+          <li class="main-menu__header_item">Наши контакты</li>
+          <li class="main-menu__minor_list">
+            <ul>
+              <div class="main-menu__amo-on-desktop-our-contacts-footer">
+                <div class="our_contacts">
+  <ul class="socials socials-clean socials-colored">
+    <li class="socials__item socials__item-colored icon-telegram-colored" data-service="telegram">
+      <a href="https://t.me/amoCRM_Official_bot" target="_blank" rel="noopener noreferrer"></a>
+    </li>
+    <li class="socials__item socials__item-colored icon-vk-colored" data-service="vk">
+      <a href="https://vk.me/-63068509" target="_blank" rel="noopener noreferrer"></a>
+    </li>
+    <li class="socials__item socials__item-colored icon-viber-colored" data-service="viber">
+      <a href="viber://pa?chatURI=amocrm_support" target="_blank" rel="noopener noreferrer"></a>
+    </li>
+    <li class="socials__item socials__item-colored icon-online-chat-colored" data-service="livechat">
+      <span style="cursor: pointer"></span>
+    </li>
+  </ul>
+</div>
+              </div>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="main-menu__subcolumn main-menu__follow main-menu__item_flex-1">
+          <ul class="main-menu__header_list">
+            <li class="main-menu__header_item main-menu__header_follow-us">Мы в соц. сетях</li>
+          </ul>
+          <ul class="socials">
+            <li class="socials__item">
+              <a href="https://twitter.com/amocrm_ru" target="_blank" class="socials__icon_link icon-twitter"></a>
+            </li>
+            <li class="socials__item">
+              <a href="https://vk.com/amocrm_ru" target="_blank" class="socials__icon_link icon-vkontakte"></a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.youtube.com/user/amocrmru" target="_blank" class="socials__icon_link icon-youtube"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="main-menu__subcolumn main-menu__legal main-menu__item_flex-2">
+          <p class="main-menu__copyright">QSOFT © 2009-2025
+            <br>
+            Все права защищены</p>
+          <ul class="main-menu__terms">
+            <li class="main-menu__terms_item">
+              <a class="main-menu__terms_link" href="/agreement/">Лицензионное соглашение</a>
+            </li>
+            <li class="main-menu__terms_item">
+              <a class="main-menu__terms_link" href="/confidence/">Политика компании<br>
+                в отношении обработки<br>
+                персональных данных</a>
+            </li>
+            <li class="main-menu__terms_item">
+              <a class="main-menu__terms_link" href="/security/">Безопасность и надежность</a>
+            </li>
+            <li class="main-menu__terms_item">
+              <a class="main-menu__terms_link" href="/google-disclosure/">Раскрытие информации Google</a>
+            </li>
+          </ul>
+
+          <a class="messenger" href="//amo.tm/?utm_source=amocrm" target="_blank" rel="noopener noreferrer">
+  <div class="messenger__logo">
+    <img src="/static/assets/svg/amo.svg" alt="Логотип корпоративного мессенджера amo" class="messenger__logo-icon">
+  </div>
+  <p class="messenger__title">
+    Корпоративный мессенджер
+  </p>
+</a>
+
+          <a href="//www.sk.ru/" class="main-menu__skolkovo-logo" target="_blank" rel="nofollow noopener">
+            <img src="/static/images/svg/skolkovo.svg" alt="Логотип Сколково">
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</footer>
+  </div>
+
+      <!-- Google Tag Manager -->
+<noscript>
+  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-JNLZN" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+</noscript>
+<script nonce="e9af510aa1a2">
+  (function (w, d, s, l, i, n) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.nonce = n;
+    j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-JNLZN', 'e9af510aa1a2');
+</script>
+<!-- End Google Tag Manager -->
+
+<script nonce="e9af510aa1a2" type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1001147530;
+  var google_conversion_label = "LhY6CL7s0QUQipmx3QM";
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script nonce="e9af510aa1a2" async type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1001147530/?value=0&amp;label=LhY6CL7s0QUQipmx3QM&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script nonce="e9af510aa1a2" async src="https://www.googletagmanager.com/gtag/js?id=UA-42302238-1"></script>
+<script nonce="e9af510aa1a2">
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'UA-42302238-1');
+</script>
+
+<script nonce="e9af510aa1a2" type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 921283709;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script nonce="e9af510aa1a2" async type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/921283709/?guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+  <!-- New Hello Bar Code -->
+    <script nonce="e9af510aa1a2" src="https://my.hellobar.com/6115e1931c23669d96327bfbd5264fd403d658e0.js" type="text/javascript" charset="utf-8" async="async"> </script>
+  <!-- End Of Hello Bar Code -->
+
+<script type="text/javascript" nonce="e9af510aa1a2">
+  /* <![CDATA[ */
+  var google_conversion_id = 1007763931;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script nonce="e9af510aa1a2" async type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007763931/?value=0&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+<!-- Global site tag (gtag.js) - AdWords: 828643581 -->
+<script nonce="e9af510aa1a2" async src="https://www.googletagmanager.com/gtag/js?id=AW-828643581"></script>
+<script nonce="e9af510aa1a2">
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'AW-828643581');
+</script>
+
+<script nonce="e9af510aa1a2" type="text/javascript">
+  !function(){
+    var t=document.createElement("script");
+    t.type="text/javascript",
+    t.async=!0,
+    t.src="https://vk.com/js/api/openapi.js?169",
+    t.onload=function(){
+      if (typeof VK !== 'undefined') {
+        VK.Retargeting.Init("VK-RTRG-183809-7ek15"),
+        VK.Retargeting.Hit()
+        VK.Retargeting.Init("VK-RTRG-361827-a1TtO"),
+        VK.Retargeting.Hit()
+      }
+    },
+    t.nonce='e9af510aa1a2';
+    document.head.appendChild(t)}();
+</script>
+<noscript>
+  <img src="https://vk.com/rtrg?p=VK-RTRG-183809-7ek15" style="position:fixed; left:-999px;" alt=""/>
+  <img src="https://vk.com/rtrg?p=VK-RTRG-361827-a1TtO" style="position:fixed; left:-999px;" alt=""/>
+</noscript>  
+<script type="text/javascript" nonce="e9af510aa1a2" id="amo_pixel_identifier_js" async="async" src="//piper.amocrm.ru/pixel/js/identifier/pixel_identifier.js"></script>
+<script type="text/javascript" nonce="e9af510aa1a2" async="async" src="/static/js/bower_components/intl-tel-input/lib/libphonenumber/build/utils.js?1744199315"></script>
+<script type="text/javascript" nonce="e9af510aa1a2" src="/static/app.js?1744199315"></script>
+<script  nonce="e9af510aa1a2" src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+
+  <script nonce="e9af510aa1a2" type="text/javascript" src="/static/js/pages/developers/prism.js?1744199315"></script>
+  <script nonce="e9af510aa1a2" type="text/javascript" src="/static/js/pages/ajax_search.js?1744199315"></script>
+</body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: www.amocrm.ru @ 2025-04-10 16:30:53 by W3 Total Cache
+-->

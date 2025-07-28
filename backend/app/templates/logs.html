@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Логи API</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #4285f4;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .log-container {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .log-filters {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .log-filters select, .log-filters input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .log-filters button {
+            padding: 8px 15px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .log-filters button:hover {
+            background-color: #3367d6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            position: sticky;
+            top: 0;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        .error {
+            color: #d32f2f;
+        }
+        .warning {
+            color: #f57c00;
+        }
+        .info {
+            color: #0288d1;
+        }
+        .debug {
+            color: #388e3c;
+        }
+        .log-details {
+            white-space: pre-wrap;
+            font-family: monospace;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .message-cell {
+            white-space: pre-wrap;
+            font-family: monospace;
+            max-width: 500px;
+            word-break: break-word;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        #autoRefresh {
+            margin-right: 5px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination button {
+            margin: 0 5px;
+            padding: 8px 15px;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .pagination button:hover {
+            background-color: #e0e0e0;
+        }
+        .pagination button.active {
+            background-color: #4285f4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Логи сервера</h1>
+        <div class="button-group">
+            <label>
+                <input type="checkbox" id="autoRefresh"> Автообновление
+            </label>
+            <button onclick="clearLogs()">Очистить логи</button>
+            <button onclick="refreshLogs()">Обновить</button>
+        </div>
+    </div>
+    
+    <div class="log-container">
+        <div class="log-filters">
+            <select id="levelFilter">
+                <option value="">Все уровни</option>
+                <option value="DEBUG">DEBUG</option>
+                <option value="INFO">INFO</option>
+                <option value="WARNING">WARNING</option>
+                <option value="ERROR">ERROR</option>
+                <option value="CRITICAL">CRITICAL</option>
+            </select>
+            <input type="text" id="messageFilter" placeholder="Фильтр по сообщению">
+            <button onclick="filterLogs()">Применить фильтр</button>
+        </div>
+        
+        <div id="logsTableContainer" style="overflow-x: auto; max-height: 600px;">
+            <table id="logsTable">
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Уровень</th>
+                        <th>Модуль</th>
+                        <th>Сообщение</th>
+                    </tr>
+                </thead>
+                <tbody id="logsBody">
+                    <!-- Здесь будут отображаться логи -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="pagination" id="pagination">
+            <!-- Здесь будут кнопки пагинации -->
+        </div>
+    </div>
+
+    <script>
+        let logs = [];
+        let filteredLogs = [];
+        let currentPage = 1;
+        const logsPerPage = 100;
+        let autoRefreshInterval = null;
+        
+        // Загрузка логов при загрузке страницы
+        window.onload = function() {
+            refreshLogs();
+            
+            // Настройка автообновления
+            document.getElementById('autoRefresh').addEventListener('change', function() {
+                if (this.checked) {
+                    autoRefreshInterval = setInterval(refreshLogs, 5000);
+                } else {
+                    clearInterval(autoRefreshInterval);
+                }
+            });
+        };
+        
+        // Получение логов с сервера
+        function refreshLogs() {
+            fetch('/api/logs')
+                .then(response => response.json())
+                .then(data => {
+                    logs = data;
+                    filterLogs();
+                })
+                .catch(error => {
+                    console.error('Ошибка при получении логов:', error);
+                });
+        }
+        
+        // Очистка логов
+        function clearLogs() {
+            if (confirm('Вы уверены, что хотите очистить все логи?')) {
+                fetch('/api/logs/clear', { method: 'POST' })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            logs = [];
+                            filterLogs();
+                            alert('Логи очищены');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Ошибка при очистке логов:', error);
+                    });
+            }
+        }
+        
+        // Фильтрация логов
+        function filterLogs() {
+            const levelFilter = document.getElementById('levelFilter').value;
+            const messageFilter = document.getElementById('messageFilter').value.toLowerCase();
+            
+            filteredLogs = logs.filter(log => {
+                return (levelFilter === '' || log.level === levelFilter) &&
+                       (messageFilter === '' || log.message.toLowerCase().includes(messageFilter));
+            });
+            
+            currentPage = 1;
+            renderLogs();
+            renderPagination();
+        }
+        
+        // Отображение логов
+        function renderLogs() {
+            const logsBody = document.getElementById('logsBody');
+            logsBody.innerHTML = '';
+            
+            const startIndex = (currentPage - 1) * logsPerPage;
+            const endIndex = Math.min(startIndex + logsPerPage, filteredLogs.length);
+            
+            for (let i = startIndex; i < endIndex; i++) {
+                const log = filteredLogs[i];
+                const row = document.createElement('tr');
+                
+                row.innerHTML = `
+                    <td>${log.timestamp}</td>
+                    <td class="${log.level.toLowerCase()}">${log.level}</td>
+                    <td>${log.logger}</td>
+                    <td class="message-cell">${escapeHtml(log.message)}</td>
+                `;
+                
+                row.addEventListener('click', function() {
+                    const detailsRow = document.createElement('tr');
+                    const detailsCell = document.createElement('td');
+                    detailsCell.colSpan = 4;
+                    detailsCell.innerHTML = `
+                        <div class="log-details">
+                            <strong>Полное сообщение:</strong> ${escapeHtml(log.message)}
+                            <br>
+                            <strong>Файл:</strong> ${log.path}:${log.line}
+                        </div>
+                    `;
+                    
+                    // Удаляем предыдущие детали, если они есть
+                    if (row.nextSibling && row.nextSibling.classList.contains('details-row')) {
+                        row.nextSibling.remove();
+                    } else {
+                        detailsRow.classList.add('details-row');
+                        row.after(detailsRow);
+                        detailsRow.appendChild(detailsCell);
+                    }
+                });
+                
+                logsBody.appendChild(row);
+            }
+        }
+        
+        // Отображение пагинации
+        function renderPagination() {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            
+            const totalPages = Math.ceil(filteredLogs.length / logsPerPage);
+            
+            // Кнопка "Предыдущая"
+            if (totalPages > 1) {
+                const prevButton = document.createElement('button');
+                prevButton.innerText = '←';
+                prevButton.disabled = currentPage === 1;
+                prevButton.addEventListener('click', function() {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderLogs();
+                        renderPagination();
+                    }
+                });
+                pagination.appendChild(prevButton);
+            }
+            
+            // Кнопки со страницами
+            const maxVisiblePages = 5;
+            let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+            let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+            
+            if (endPage - startPage + 1 < maxVisiblePages && startPage > 1) {
+                startPage = Math.max(1, endPage - maxVisiblePages + 1);
+            }
+            
+            for (let i = startPage; i <= endPage; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.innerText = i;
+                pageButton.classList.toggle('active', i === currentPage);
+                pageButton.addEventListener('click', function() {
+                    currentPage = i;
+                    renderLogs();
+                    renderPagination();
+                });
+                pagination.appendChild(pageButton);
+            }
+            
+            // Кнопка "Следующая"
+            if (totalPages > 1) {
+                const nextButton = document.createElement('button');
+                nextButton.innerText = '→';
+                nextButton.disabled = currentPage === totalPages;
+                nextButton.addEventListener('click', function() {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderLogs();
+                        renderPagination();
+                    }
+                });
+                pagination.appendChild(nextButton);
+            }
+        }
+        
+        // Экранирование HTML
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.innerText = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html> 
